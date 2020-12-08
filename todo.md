@@ -1,0 +1,18 @@
+- [] migrar os posts com acessibilidade
+- [] migrar os posts em ingles com acessibilidade
+- [] adicionar ícones com links pros socials
+- [] adicionar title e meta tags
+- [] implementar página de talks
+- [] implementar ordenação
+- [] arrumar o manifest.json
+- [] deploy
+- [] adicionar link para imagens de posts
+- [] refatorar caminho das imagens usando rollup plugin alias
+- [] implementar tooltip
+- [] implementar callout
+- [] implementar light mode
+- [] deploy
+- [] migrar código que tá em imagens pra highlightjs
+- [] experimentar cards com resumos dos posts
+- [] implementar paginação
+- [] consertar readme

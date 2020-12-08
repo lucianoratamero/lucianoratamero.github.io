@@ -1,0 +1,162 @@
+/* base styles */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: -webkit-fill-available;
+  font-size: 18px;
+}
+
+main {
+  position: relative;
+  max-width: 56em;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+mark {
+  background: linear-gradient(145deg, var(--link-color), var(--accent-color));
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: dotted;
+}
+
+a:visited {
+  color: var(--link-color-visited);
+}
+
+figure {
+  margin: 1.2em auto;
+  text-align: center;
+}
+
+img {
+  max-width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+@media (min-width: 480px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+}
+
+mark {
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  -webkit-background-clip: text;
+}
+
+p {
+  line-height: 1.4em;
+  margin: 1.5em auto;
+  word-break: break-word;
+}
+
+@media (min-width: 480px) {
+  p {
+    font-size: 1.3rem;
+  }
+}
+
+ul {
+  padding: revert;
+  padding-left: 1rem;
+}
+
+/* base theme */
+
+pre.hljs {
+  font-family: "IBM Plex Mono", Inconsolata, Hack, monospace;
+
+  padding: 0.8rem;
+  border-radius: 0.6rem;
+
+  font-size: 75%;
+  line-height: 1.4;
+  counter-reset: line;
+
+  box-shadow: var(--base-box-shadow);
+  transition: box-shadow var(--transition-duration);
+}
+
+pre.hljs code {
+  counter-increment: line;
+  padding-right: 0.8rem;
+}
+
+pre.hljs code:before {
+  content: counter(line);
+  padding-right: 0.8rem;
+  color: #deb887;
+  -webkit-user-select: none;
+  min-width: 2ch;
+  display: inline-block;
+  text-align: center;
+}
+
+.theme {
+  --transition-duration: 0.8s;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.4rem;
+
+  font-size: 18px;
+  line-height: 1.4;
+  font-family: "Poppins", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--font-color);
+
+  background-color: var(--background-color);
+  transition: background-color var(--transition-duration);
+}
+
+/* blog-post */
+.toc {
+  margin-top: 0.8em;
+}
+
+.blog-post h2,
+.blog-post h3,
+.blog-post h4,
+.blog-post h5,
+.blog-post h6 {
+  margin-top: 1.8rem;
+}
+
+.blog-post h1 {
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+@media (min-width: 480px) {
+  .blog-post h1 {
+    word-break: revert;
+  }
+}
+
+.blog-post .meta {
+  margin: 0.4rem auto;
+}
