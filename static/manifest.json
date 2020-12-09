@@ -1,8 +1,8 @@
 {
-	"background_color": "#ffffff",
-	"theme_color": "#333333",
-	"name": "TODO",
-	"short_name": "TODO",
+	"background_color": "#111111",
+	"theme_color": "#111111",
+	"name": "luciano@ratamero.com",
+	"short_name": "ratamero.com",
 	"display": "minimal-ui",
 	"start_url": "/",
 	"icons": [

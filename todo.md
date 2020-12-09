@@ -4,7 +4,7 @@
 - [x] adicionar title e meta tags
 - [] implementar página de talks
 - [] implementar ordenação
-- [] arrumar o manifest.json
+- [x] arrumar o manifest.json
 - [] deploy
 - [] adicionar link para imagens de posts
 - [] refatorar caminho das imagens usando rollup plugin alias

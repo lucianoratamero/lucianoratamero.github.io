@@ -49,19 +49,19 @@
 <p>thanks for stopping by!</p>
 
 <section class="social-icons">
-  <a href="https://twitter.com/lucianoratamero"><Icon
+  <a href="https://twitter.com/lucianoratamero" aria-label="Luciano on Twitter"><Icon
       scale={2}
       data={faTwitter} /></a>
-  <a href="https://www.linkedin.com/in/luciano-ratamero-06b98b32/"><Icon
+  <a href="https://www.linkedin.com/in/luciano-ratamero-06b98b32/" aria-label="Luciano on LinkedIn"><Icon
       scale={2}
       data={faLinkedin} /></a>
-  <a href="https://github.com/lucianoratamero/"><Icon
+  <a href="https://github.com/lucianoratamero/" aria-label="Luciano on Github"><Icon
       scale={2}
       data={faGithub} /></a>
-  <a href="http://lastfm.com/user/lucianoratamero"><Icon
+  <a href="http://lastfm.com/user/lucianoratamero" aria-label="Luciano on LastFM"><Icon
       scale={2}
       data={faLastfm} /></a>
-  <a href="https://twitch.tv/lucianoratamero"><Icon
+  <a href="https://twitch.tv/lucianoratamero" aria-label="Luciano on Twitch"><Icon
       scale={2}
       data={faTwitch} /></a>
 </section>
