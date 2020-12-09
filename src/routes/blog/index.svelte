@@ -29,6 +29,11 @@
     margin: 0 0 1em 0;
     padding: 0;
   }
-  ul, li { list-style: none; }
-  li { margin: 0.4rem 0;}
+  ul,
+  li {
+    list-style: none;
+  }
+  li {
+    margin: 0.4rem 0;
+  }
 </style>

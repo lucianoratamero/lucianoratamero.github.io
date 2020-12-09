@@ -1,8 +1,16 @@
 <script lang="ts">
+  import Icon from "svelte-awesome/components/Icon.svelte";
+  import {
+    faTwitch,
+    faTwitter,
+    faLastfm,
+    faGithub,
+    faLinkedin,
+  } from "@fortawesome/free-brands-svg-icons";
   import eu from "../img/eu.jpg";
   import eu3x from "../img/eu-3x.jpg";
 
-  function _calculateAge(birthday) {
+  function _calculateAge(birthday: Date) {
     // birthday is a date
     var ageDifMs = Date.now() - birthday.getTime();
     var ageDate = new Date(ageDifMs); // miliseconds from epoch
@@ -40,10 +48,19 @@
 
 <p>thanks for stopping by!</p>
 
+<section class="social-icons">
+  <a href="https://twitter.com/lucianoratamero"><Icon scale={2} data={faTwitter} /></a>
+  <a href="https://www.linkedin.com/in/luciano-ratamero-06b98b32/"><Icon scale={2} data={faLinkedin} /></a>
+  <a href="https://github.com/lucianoratamero/"><Icon scale={2} data={faGithub} /></a>
+  <a href="http://lastfm.com/user/lucianoratamero"><Icon scale={2} data={faLastfm} /></a>
+  <a href="https://twitch.tv/lucianoisstreaming"><Icon scale={2} data={faTwitch} /></a>
+</section>
+
 <style>
   h1,
   figure,
-  p {
+  p,
+  .social-icons {
     text-align: center;
     margin: 0 auto;
   }
@@ -66,6 +83,10 @@
 
   p {
     margin: 0.25em auto;
+  }
+
+  .social-icons {
+    margin-top: 0.8em;
   }
 
   @media (min-width: 480px) {
