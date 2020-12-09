@@ -14,6 +14,9 @@ html {
   scroll-behavior: smooth;
   height: -webkit-fill-available;
   font-size: 18px;
+  font-family: "Poppins", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 main {
@@ -36,6 +39,11 @@ a:visited {
   color: var(--link-color-visited);
 }
 
+button {
+  font-size: 18px;
+  font-family: "Poppins", Helvetica, sans-serif;
+}
+
 figure {
   margin: 1.2em auto;
   text-align: center;
@@ -48,7 +56,7 @@ img {
 }
 
 h1 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 700;
 }
 
@@ -124,9 +132,6 @@ pre.hljs code:before {
 
   font-size: 18px;
   line-height: 1.4;
-  font-family: "Poppins", Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   color: var(--font-color);
 
   background-color: var(--background-color);
@@ -148,13 +153,6 @@ pre.hljs code:before {
 
 .blog-post h1 {
   line-height: 1.2;
-  word-break: break-word;
-}
-
-@media (min-width: 480px) {
-  .blog-post h1 {
-    word-break: revert;
-  }
 }
 
 .blog-post .meta {

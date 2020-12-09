@@ -1,39 +1,15 @@
 <script context="module" lang="ts">
+  import { postsByPage, pageRange } from "./_posts";
   export function preload() {
-    return this.fetch(`blog.json`)
-      .then((r: { json: () => any }) => r.json())
-      .then((posts: { slug: string; title: string; html: any }[]) => {
-        return { posts };
-      });
+    return { posts: postsByPage(0), pageNumber: 1, pageRange };
   }
 </script>
 
 <script lang="ts">
+  import PaginatedPosts from "../../components/PaginatedPosts.svelte";
+
   export let posts: { slug: string; title: string; html: any }[];
+  export let pageRange, pageNumber;
 </script>
 
-<svelte:head>
-  <title>recent posts - luciano@ratamero.com</title>
-</svelte:head>
-
-<h1>Recent posts</h1>
-
-<ul>
-  {#each posts as post}
-    <li><a rel="prefetch" href="blog/{post.slug}">{post.title}</a></li>
-  {/each}
-</ul>
-
-<style>
-  ul {
-    margin: 0 0 1em 0;
-    padding: 0;
-  }
-  ul,
-  li {
-    list-style: none;
-  }
-  li {
-    margin: 0.4rem 0;
-  }
-</style>
+<PaginatedPosts {posts} {pageNumber} {pageRange} />

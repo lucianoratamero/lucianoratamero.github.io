@@ -89,11 +89,12 @@
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: stretch;
   }
 
   li,
   a {
+    flex-grow: 1;
     display: flex;
     text-align: center;
   }

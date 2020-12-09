@@ -268,4 +268,31 @@ posts.forEach((post) => {
   post.html = post.html.replace(/^\t{3}/gm, "");
 });
 
+const PAGE_SIZE = 5;
+
+export const orderPostsByDate = (posts) => posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+export function paginate(posts) {
+  let paginatedPosts = {};
+
+  posts.map((post, i) => {
+    let pageIndex = Math.floor(i / PAGE_SIZE);
+
+    if (!paginatedPosts[pageIndex]) {
+      paginatedPosts[pageIndex] = [];
+    }
+
+    paginatedPosts[pageIndex].push(post);
+  });
+
+  return paginatedPosts;
+}
+
+const orderedPosts = orderPostsByDate(posts);
+
+export const paginatedPosts = paginate(orderedPosts);
+export const numberOfPages = Object.keys(paginatedPosts).length;
+export const postsByPage = (index) => paginatedPosts[index];
+export const pageRange = Array(numberOfPages).fill().map((_, idx) => idx + 1);
+
 export default posts;
