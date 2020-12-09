@@ -1,6 +1,6 @@
-- [] migrar os posts com acessibilidade
+- [x] migrar os posts com acessibilidade
 - [] migrar os posts em ingles com acessibilidade
-- [] adicionar ícones com links pros socials
+- [x] adicionar ícones com links pros socials
 - [] adicionar title e meta tags
 - [] implementar página de talks
 - [] implementar ordenação
