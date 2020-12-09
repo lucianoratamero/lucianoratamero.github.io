@@ -13,7 +13,7 @@
   <p>
   <em>for native english speakers,
     <a
-      href="https://lucianoratamero.github.io/en/keeping-global-state-management-sane-with-rel-events/">here's
+      href="/en/keeping-global-state-management-sane-with-rel-events/">here's
       the translated post</a></em>
 </p>
 <p>
@@ -110,22 +110,22 @@
   ou
   <code>mapStateToProps</code>. Seria algo mais ou menos assim:
 </p>
-<p>
+<figure>
   <img
     src={image1}
     alt="Evento Imaginário" />
-</p>
+</figure>
 <p>
   Legal, mas onde colocaríamos todo seu comportamento? Onde tá o código que faz
   a requisição? Como lidar com casos de erro? Digamos que, além do objeto de
   evento, nós tenhamos algo que gerencia todo o fluxo do evento, que chamaríamos
   de Event Manager:
 </p>
-<p>
+<figure>
   <img
   src={image2}
   alt="Basic rel-events HTTPEvent" />
-</p>
+</figure>
 <p>
   Melhor. Mas como esse manager tá implementado? Porque, se a gente precisa
   lidar com o fluxo inteiro dentro dele, ele precisa saber de muita coisa: como
@@ -135,21 +135,21 @@
   esqueci que eu preciso de um estado inicial pra esse evento também, pra gente
   ter dados antes mesmo da requisição. Calma, calma, vamo lá:
 </p>
-<p>
+<figure>
   <img
   src={image3}
   alt="LoginEventManager" />
-</p>
+</figure>
 <p>
   É mais ou menos isso que a gente precisa, né? Mas então, como que a gente
   faria pra registrar quais Componentes que poderiam disparar esse Evento? Como
   que o Componente pegaria os dados desse evento? Tamo quase lá:
 </p>
-<p>
+<figure>
   <img
   src={image4}
   alt="Registering the component" />
-</p>
+</figure>
 <p>
   E essa é exatamente a API atual para um Evento HTTP (HTTPEvent) da lib
   <code>rel-events</code>. Nada de actions nem reducers, nada de acoplar as

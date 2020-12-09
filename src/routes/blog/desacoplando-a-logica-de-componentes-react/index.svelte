@@ -16,7 +16,7 @@
 <figure><img src={cover} alt="Ilustração com as logos do React e do Redux" /></figure>
 <p>
   <em>for native english speakers,
-    <a href="../../en/decoupling-logic-from-react-components/">here's the
+    <a href="/en/decoupling-logic-from-react-components/">here's the
       translated post</a></em>
 </p>
 <p>
