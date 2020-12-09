@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
   import Icon from "svelte-awesome/components/Icon.svelte";
   import {
     faTwitch,
@@ -10,7 +10,7 @@
   import eu from "../img/eu.jpg";
   import eu3x from "../img/eu-3x.jpg";
 
-  function _calculateAge(birthday: Date) {
+  function _calculateAge(birthday) {
     // birthday is a date
     var ageDifMs = Date.now() - birthday.getTime();
     var ageDate = new Date(ageDifMs); // miliseconds from epoch
