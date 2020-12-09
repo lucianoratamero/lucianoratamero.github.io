@@ -5,6 +5,21 @@
   import runapistar from "../../../img/run-apistar (cópia).gif";
 </script>
 
+<svelte:head>
+  <title>
+    #ajudaLuciano - virtualenv e virtualenvwrapper: como eu uso -
+    luciano@ratamero.com
+  </title>
+  <meta
+    name="description"
+    content="Aqui vão
+  algumas dicas de como eu uso virtualenv e virtualenvwrapper pra facilitar minha vida como
+  desenvolvedor, principalmente nesse mundo de python 2/3, angular, react, docker e afins. :]" />
+  <meta
+    name="keywords"
+    content="Luciano Ratamero, #ajudaLuciano, virtualenv, virtualenvwrapper" />
+</svelte:head>
+
 <h1>
   <mark>#ajudaLuciano - virtualenv e virtualenvwrapper: como eu uso</mark>
 </h1>

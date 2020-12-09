@@ -10,14 +10,28 @@
   import image8 from "../../../img/desacoplando-a-logica-de-componentes-react/image8.png";
 </script>
 
+<svelte:head>
+  <title>
+    Desacoplando a lógica de componentes React - luciano@ratamero.com
+  </title>
+  <meta
+    name="description"
+    content="Nesse post, discutiremos como separar as lógicas de renderização e de domínio usando React e Redux :]" />
+  <meta
+    name="keywords"
+    content="Luciano Ratamero, react, redux, grandes projetos, arquitetura, planejamento, frontend, javascript, frameworks" />
+</svelte:head>
+
 <h1><mark>Desacoplando a lógica de componentes React</mark></h1>
 
 <p class="meta">2019-7-23</p>
-<figure><img src={cover} alt="Ilustração com as logos do React e do Redux" /></figure>
+<figure>
+  <img src={cover} alt="Ilustração com as logos do React e do Redux" />
+</figure>
 <p>
   <em>for native english speakers,
-    <a href="/en/decoupling-logic-from-react-components/">here's the
-      translated post</a></em>
+    <a href="/en/decoupling-logic-from-react-components/">here's the translated
+      post</a></em>
 </p>
 <p>
   Sempre que há um novo projeto baseado em React, grande parte dos devs frontend

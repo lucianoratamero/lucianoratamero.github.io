@@ -1,10 +1,25 @@
+<svelte:head>
+  <title>
+    git e github parte 3: boas práticas de organização de branches -
+    luciano@ratamero.com
+  </title>
+  <meta
+    name="description"
+    content="Esse post explica os conceitos básicos de Git e como ele interaje com o Github; tudo isso da forma mais didática possível :]" />
+  <meta
+    name="keywords"
+    content="Luciano Ratamero, git, github, boas práticas, organização de branches, parte 3" />
+</svelte:head>
+
 <h1>
   <mark>git e github parte 3: boas práticas de organização de branches</mark>
 </h1>
 
 <p class="meta">2016-02-19</p>
 <figure>
-  <img src="https://lucianoratamero.github.io/img/cover-git-3.png" alt="Ilustração com logo do git e do github" />
+  <img
+    src="https://lucianoratamero.github.io/img/cover-git-3.png"
+    alt="Ilustração com logo do git e do github" />
 </figure>
 <p>
   chegamos à parte 3 dos posts sobre git e github! nos
@@ -42,11 +57,16 @@
   </p>
 </div>
 <h3>branch <code>master/main</code></h3>
-<figure><img src="https://lucianoratamero.github.io/img/master.jpg" alt="Ilustração de uma branch principal, chamada master ou main" /></figure>
+<figure>
+  <img
+    src="https://lucianoratamero.github.io/img/master.jpg"
+    alt="Ilustração de uma branch principal, chamada master ou main" />
+</figure>
 <p>
   o branch
-  <code>master</code> (ou, preferivelmente, <code>main</code>)
-  é o branch no qual está o código que está em
+  <code>master</code>
+  (ou, preferivelmente,
+  <code>main</code>) é o branch no qual está o código que está em
   <strong>produção</strong>, ou seja, que está sendo
   <strong>diretamente usado pelos clientes</strong>. ele é caracterizado por sua
   grande quantidade de
@@ -58,7 +78,11 @@
   <code>hotfix</code>.
 </p>
 <h3>branch <code>develop</code></h3>
-<figure><img src="https://lucianoratamero.github.io/img/develop.jpg" alt="Ilustração de uma branch paralela à principal, chamada develop" /></figure>
+<figure>
+  <img
+    src="https://lucianoratamero.github.io/img/develop.jpg"
+    alt="Ilustração de uma branch paralela à principal, chamada develop" />
+</figure>
 <p>
   o branch
   <code>develop</code>
@@ -74,7 +98,11 @@
   por causa de instabilidade de outras.
 </p>
 <h3>branches de <code>release</code></h3>
-<figure><img src="https://lucianoratamero.github.io/img/release.jpg" alt="Ilustração de uma branch saindo de develop e dando merge na principal" /></figure>
+<figure>
+  <img
+    src="https://lucianoratamero.github.io/img/release.jpg"
+    alt="Ilustração de uma branch saindo de develop e dando merge na principal" />
+</figure>
 <p>
   os branches de
   <code>release</code>
@@ -104,7 +132,11 @@
   já salvou minha vida algumas vezes. ;)
 </p>
 <h3>branches de <code>hotfix</code></h3>
-<figure><img src="https://lucianoratamero.github.io/img/hotfix.jpg" alt="Ilustração de uma branch saindo da principal e dando merge na principal e na develop" /></figure>
+<figure>
+  <img
+    src="https://lucianoratamero.github.io/img/hotfix.jpg"
+    alt="Ilustração de uma branch saindo da principal e dando merge na principal e na develop" />
+</figure>
 <p>
   os branches de
   <code>hotfix</code>
@@ -121,7 +153,11 @@
   corrigido.
 </p>
 <h3>branches de <code>feature</code></h3>
-<figure><img src="https://lucianoratamero.github.io/img/feature.jpg" alt="Ilustração de uma branch saindo da develop e dando merge na develop" /></figure>
+<figure>
+  <img
+    src="https://lucianoratamero.github.io/img/feature.jpg"
+    alt="Ilustração de uma branch saindo da develop e dando merge na develop" />
+</figure>
 <p>
   os branches de
   <code>feature</code>
@@ -140,7 +176,11 @@
   tamanho que permita a fácil revisão do código por outras pessoas.
 </p>
 <h3>branches de <code>topic</code></h3>
-<figure><img src="https://lucianoratamero.github.io/img/topic.jpg" alt="Ilustração de uma branch saindo de uma feature e mergeando na mesma" /></figure>
+<figure>
+  <img
+    src="https://lucianoratamero.github.io/img/topic.jpg"
+    alt="Ilustração de uma branch saindo de uma feature e mergeando na mesma" />
+</figure>
 <p>
   os branches de
   <code>topic</code>
@@ -168,8 +208,8 @@
   branches te interessou, acho que vale a pena dar uma olhada no
   <a href="https://github.com/nvie/gitflow">repositório deles</a>
   e ler o
-  <a href="https://nvie.com/posts/a-successful-git-branching-model/">post sobre o
-    workflow deles</a>. nesse post, eles detalham melhor o que é realmente
+  <a href="https://nvie.com/posts/a-successful-git-branching-model/">post sobre
+    o workflow deles</a>. nesse post, eles detalham melhor o que é realmente
   necessário ser feito pra realizar essa proposta de organização.
 </p>
 <p>

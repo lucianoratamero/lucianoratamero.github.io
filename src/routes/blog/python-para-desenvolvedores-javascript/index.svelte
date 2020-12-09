@@ -7,14 +7,26 @@
   const { page } = stores();
 </script>
 
+<svelte:head>
+  <title>Python para desenvolvedores JavaScript - luciano@ratamero.com</title>
+  <meta
+    name="description"
+    content="percebi que as poucas dificuldades que
+    tive durante minha adaptação de javascript pra python (há anos) nunca foram ensinadas pra mim de uma maneira clara. aqui vão algumas dicas :]" />
+  <meta
+    name="keywords"
+    content="Luciano Ratamero, python, javascript, frontend, dicas, tutorial" />
+</svelte:head>
+
 <h1><mark>Python para desenvolvedores JavaScript</mark></h1>
 
 <p>
   logo depois de ter lido
   <a
     href="https://dev.to/underdogio/python-for-javascript-developers"
-    target="_blank" rel="noopener">esse post</a>, eu percebi que as poucas dificuldades que
-  tive durante minha adaptação de javascript pra python (há anos) nunca foram
+    target="_blank"
+    rel="noopener">esse post</a>, eu percebi que as poucas dificuldades que tive
+  durante minha adaptação de javascript pra python (há anos) nunca foram
   ensinadas pra mim de uma maneira clara.
 </p>
 
@@ -34,9 +46,11 @@
 <p>pra quem quiser pular pra uma parte em específico, aqui vai:</p>
 <ul class="toc">
   <li>
-  <a href="{$page.path}#sintaxe">sintaxe</a>
+    <a href="{$page.path}#sintaxe">sintaxe</a>
     <ul>
-      <li><a href="{$page.path}#declaracao-de-variaveis">declaração de variáveis</a></li>
+      <li>
+        <a href="{$page.path}#declaracao-de-variaveis">declaração de variáveis</a>
+      </li>
       <li><a href="{$page.path}#blocos">blocos</a></li>
       <li><a href="{$page.path}#controle-de-fluxo">controle de fluxo</a></li>
     </ul>

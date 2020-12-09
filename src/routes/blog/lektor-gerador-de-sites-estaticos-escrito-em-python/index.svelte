@@ -1,9 +1,24 @@
+<svelte:head>
+  <title>
+    Lektor: gerador de sites estáticos escrito em Python - luciano@ratamero.com
+  </title>
+  <meta
+    name="description"
+    content="vamos começar com um post um pouco meta: sobre como eu fiz esse blog usando
+  Python e Lektor, um gerador de sites estáticos escrito em Python. :]" />
+  <meta
+    name="keywords"
+    content="Luciano Ratamero, lektor, site estático, gerador, Luciano Ratamero, Python, Python Rio" />
+</svelte:head>
+
 <h1><mark>Lektor: gerador de sites estáticos escrito em Python</mark></h1>
 
 <p class="meta">2016-02-02</p>
 <figure>
   <a target="_blank" href="https://getlektor.com/">
-    <img src="https://lucianoratamero.github.io/img/cover-lektor.png" alt="Lektor's logo" /></a>
+    <img
+      src="https://lucianoratamero.github.io/img/cover-lektor.png"
+      alt="Lektor's logo" /></a>
 </figure>
 
 <p>
@@ -69,7 +84,9 @@
   do Lektor gerou algo similar à seguinte estrutura de diretórios:
 </p>
 <figure>
-  <img src="https://lucianoratamero.github.io/img/lektor-tree.jpg" alt="Árvore de diretórios de um projeto Lektor" />
+  <img
+    src="https://lucianoratamero.github.io/img/lektor-tree.jpg"
+    alt="Árvore de diretórios de um projeto Lektor" />
 </figure>
 <p>
   temos três pastas centrais aqui:
@@ -83,7 +100,8 @@
   <a
     target="_blank"
     href="https://lucianoratamero.github.io/img/content.jpg"><img
-      src="https://lucianoratamero.github.io/img/content.jpg" alt="Exemplo de um arquivo de conteúdo" /></a>
+      src="https://lucianoratamero.github.io/img/content.jpg"
+      alt="Exemplo de um arquivo de conteúdo" /></a>
 </figure>
 <p>
   aqui está o conteúdo do seu site. é um ponto interessante do Lektor: ele não
@@ -101,7 +119,8 @@
   <a
     target="_blank"
     href="https://lucianoratamero.github.io/img/models.jpg"><img
-      src="https://lucianoratamero.github.io/img/models.jpg" alt="Exemplo de um arquivo de modelo" /></a>
+      src="https://lucianoratamero.github.io/img/models.jpg"
+      alt="Exemplo de um arquivo de modelo" /></a>
 </figure>
 <p>
   se vocês notaram na parte do
@@ -123,7 +142,8 @@
   <a
     target="_blank"
     href="https://lucianoratamero.github.io/img/templates.jpg"><img
-      src="https://lucianoratamero.github.io/img/templates.jpg" alt="Exemplo de um arquivo de template" /></a>
+      src="https://lucianoratamero.github.io/img/templates.jpg"
+      alt="Exemplo de um arquivo de template" /></a>
 </figure>
 <p>
   se você já trabalhou com Django ou Jinja, ou até Angular, vai estar em casa

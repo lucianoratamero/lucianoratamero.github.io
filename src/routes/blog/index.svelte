@@ -13,7 +13,7 @@
 </script>
 
 <svelte:head>
-  <title>Blog</title>
+  <title>recent posts - luciano@ratamero.com</title>
 </svelte:head>
 
 <h1>Recent posts</h1>

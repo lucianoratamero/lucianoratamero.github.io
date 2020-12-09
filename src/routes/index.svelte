@@ -21,7 +21,7 @@
 </script>
 
 <svelte:head>
-  <title>luciano@ratamero.com - welcome!</title>
+  <title>welcome! - luciano@ratamero.com</title>
   <meta name="description" content="Luciano Ratamero's personal website" />
 </svelte:head>
 
@@ -61,7 +61,7 @@
   <a href="http://lastfm.com/user/lucianoratamero"><Icon
       scale={2}
       data={faLastfm} /></a>
-  <a href="https://twitch.tv/lucianoisstreaming"><Icon
+  <a href="https://twitch.tv/lucianoratamero"><Icon
       scale={2}
       data={faTwitch} /></a>
 </section>

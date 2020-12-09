@@ -5,6 +5,16 @@
   import runapistar from "../../../img/run-apistar (cópia).gif";
 </script>
 
+<svelte:head>
+  <title>#halp - virtualenv and virtualenvwrapper - luciano@ratamero.com</title>
+  <meta
+    name="description"
+    content="Here are some basic tips on how I use virtualenv and virtualenvwrapper to facilitate my life as a python dev :]" />
+  <meta
+    name="keywords"
+    content="Luciano Ratamero, #halp, virtualenv, virtualenvwrapper, help" />
+</svelte:head>
+
 <h1><mark>#halp - virtualenv and virtualenvwrapper</mark></h1>
 
 <p class="meta">2017-12-28</p>
@@ -62,8 +72,7 @@
 </p>
 <figure>
   <a href={gotodefinition}>
-  <img
-  src={gotodefinition} alt="Video showing Go To Definition in action" />
+    <img src={gotodefinition} alt="Video showing Go To Definition in action" />
   </a>
 </figure>
 <p>
@@ -105,13 +114,12 @@
 </p>
 <figure>
   <a href={workoncdvirtualenv}>
-  <img
-  src={workoncdvirtualenv}
-  alt="Video showing cdvirtualenv changing dirs" />
+    <img
+      src={workoncdvirtualenv}
+      alt="Video showing cdvirtualenv changing dirs" />
   </a>
 </figure>
-<p>
-</p>
+<p />
 <h4><code>cpvirtualenv</code></h4>
 <p>
   it copies everything virtualenv related from one env to another. rarely used,
@@ -157,7 +165,9 @@
     <img alt="Video showing postactivate triggering cowsay" src={cowsay} />
   </a>
   <a href={runapistar}>
-    <img alt="Video showing postactivate starting a python app" src={runapistar} />
+    <img
+      alt="Video showing postactivate starting a python app"
+      src={runapistar} />
   </a>
 </figure>
 <p>

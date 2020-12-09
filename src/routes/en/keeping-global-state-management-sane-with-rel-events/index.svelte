@@ -6,6 +6,18 @@
   import image4 from "../../../img/mantendo-o-estado-global-de-uma-maneira-sa-com-rel-events/4-registering-component.png";
 </script>
 
+<svelte:head>
+  <title>
+    Keeping global state management sane with rel-events - luciano@ratamero.com
+  </title>
+  <meta
+    name="description"
+    content="In this post, we'll discuss how to use rel-events to keep your React app's state sane :]" />
+  <meta
+    name="keywords"
+    content="Luciano Ratamero, rel-events, react, redux, big projects, architecture, planning, frontend, javascript, frameworks" />
+</svelte:head>
+
 <h1><mark>Keeping global state management sane with rel-events</mark></h1>
 
 <p class="meta">2019-10-19</p>
@@ -102,21 +114,13 @@
   or
   <code>mapStateToProps</code>. It would be something like this:
 </p>
-<figure>
-  <img
-    src={image1}
-    alt="Imaginary Event" />
-</figure>
+<figure><img src={image1} alt="Imaginary Event" /></figure>
 <p>
   Cool, but what about the whole behavior? Where's the logic to make the
   request? How to deal with bad requests? Let's say, besides the Event, we have
   something that manages the event flow, an Event Manager:
 </p>
-<figure>
-  <img
-  src={image2}
-  alt="Basic rel-events HTTPEvent" />
-</figure>
+<figure><img src={image2} alt="Basic rel-events HTTPEvent" /></figure>
 <p>
   That's better. But how is this manager implemented? Because, if it needs to
   deal with the event flow, it needs to do a lot of stuff: know how to make the
@@ -124,21 +128,13 @@
   intermediary state, because we love loading spinners! Hell, I forgot about the
   inital state of the event as well! Ok, ok, let's see:
 </p>
-<figure>
-  <img
-  src={image3}
-  alt="LoginEventManager" />
-</figure>
+<figure><img src={image3} alt="LoginEventManager" /></figure>
 <p>
   That's about it, right? But, hey, how do we trigger it? And how do I make the
   Event register which Components are able to trigger it? How does the component
   get the data from it? We're almost there:
 </p>
-<figure>
-  <img
-  src={image4}
-  alt="Registering the component" />
-</figure>
+<figure><img src={image4} alt="Registering the component" /></figure>
 <p>
   And that's exactly the current API for a HTTPEvent from
   <code>rel-events</code>. No actions, no reducers, no coupling between the

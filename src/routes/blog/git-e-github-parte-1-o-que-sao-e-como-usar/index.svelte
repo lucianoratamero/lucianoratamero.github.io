@@ -1,8 +1,22 @@
+<svelte:head>
+  <title>
+    git e github parte 1: o que são e como usar? - luciano@ratamero.com
+  </title>
+  <meta
+    name="description"
+    content="Esse post explica o que é Git, o que é o Github e por que pessoas desenvolvedoras gostam de usar essa ferramenta no trabalho; tudo isso da forma mais didática possível :]" />
+  <meta
+    name="keywords"
+    content="Luciano Ratamero, git, github, o que sao, como usar, Luciano Ratamero" />
+</svelte:head>
+
 <h1><mark>git e github parte 1: o que são e como usar?</mark></h1>
 
 <p class="meta">2016-02-14</p>
 <figure>
-  <img src="https://lucianoratamero.github.io/img/cover-git-1.png" alt="Ilustração com logo do git e do github" />
+  <img
+    src="https://lucianoratamero.github.io/img/cover-git-1.png"
+    alt="Ilustração com logo do git e do github" />
 </figure>
 <p>
   hoje eu tava conversando com uns amigos sobre git e github e percebemos um
@@ -15,7 +29,9 @@
 
 <h3>o que é o git?</h3>
 <figure>
-  <img src="https://lucianoratamero.github.io/img/git_logo.png" alt="Logo do Git" />
+  <img
+    src="https://lucianoratamero.github.io/img/git_logo.png"
+    alt="Logo do Git" />
 </figure>
 <p>
   <a href="https://git-scm.com/">git</a>
@@ -49,7 +65,9 @@
 </p>
 <h3>o que é o github?</h3>
 <figure>
-  <img src="https://lucianoratamero.github.io/img/github_logo.png" alt="Logo do Github"/>
+  <img
+    src="https://lucianoratamero.github.io/img/github_logo.png"
+    alt="Logo do Github" />
 </figure>
 <p>
   <a href="https://github.com/">github</a>
@@ -107,7 +125,11 @@
   salva com seu nome, seu email, data da alteração, suas alterações na pasta e
   uma descrição da alteração, que você mesmo escreve.
 </p>
-<figure><img src="https://lucianoratamero.github.io/img/commit.jpg" alt="Ilustração de um registro de commit" /></figure>
+<figure>
+  <img
+    src="https://lucianoratamero.github.io/img/commit.jpg"
+    alt="Ilustração de um registro de commit" />
+</figure>
 <p>
   então, na hora que você coloca os textos na pasta pela primeira vez, você cria
   um commit com a descrição "adiciona os textos que tenho agora", seleciona
@@ -147,7 +169,9 @@
   pra lá.
 </p>
 <figure>
-  <img src="https://lucianoratamero.github.io/img/repositorio.jpg" alt="Ilustração de um repositório, como se fosse nuvem" />
+  <img
+    src="https://lucianoratamero.github.io/img/repositorio.jpg"
+    alt="Ilustração de um repositório, como se fosse nuvem" />
 </figure>
 <h3>
   legal, agora tenho os meus textos salvos no github. que que eu faço com isso?
@@ -166,7 +190,11 @@
   <strong>outro</strong>
   repositório. relaxa, pra isso serve a clonagem de repositórios.
 </p>
-<figure><img src="https://lucianoratamero.github.io/img/clone.jpg" alt="Ilustração de um clone de um repo, uma cópia" /></figure>
+<figure>
+  <img
+    src="https://lucianoratamero.github.io/img/clone.jpg"
+    alt="Ilustração de um clone de um repo, uma cópia" />
+</figure>
 <p>
   <strong>clonar</strong>
   um repositório significa
@@ -202,7 +230,11 @@
   textos é criar o que chamamos de
   <strong>fork</strong>.
 </p>
-<figure><img src="https://lucianoratamero.github.io/img/fork.jpg" alt="Ilustração de um fork" /></figure>
+<figure>
+  <img
+    src="https://lucianoratamero.github.io/img/fork.jpg"
+    alt="Ilustração de um fork" />
+</figure>
 <p>
   um
   <strong>fork</strong>
@@ -262,7 +294,9 @@
   lugar.
 </p>
 <figure>
-  <img src="https://lucianoratamero.github.io/img/pull_request.jpg" alt="Ilustração de um pull request" />
+  <img
+    src="https://lucianoratamero.github.io/img/pull_request.jpg"
+    alt="Ilustração de um pull request" />
 </figure>
 <p>
   esse detalhe deixa claro que
@@ -284,7 +318,11 @@
   <strong>dois branchs</strong>
   (tecnicamente, três, porque tem o branch base, né).
 </p>
-<figure><img src="https://lucianoratamero.github.io/img/branch.jpg" alt="Ilustração de uma branch, um ramo/galho/bifurcação" /></figure>
+<figure>
+  <img
+    src="https://lucianoratamero.github.io/img/branch.jpg"
+    alt="Ilustração de uma branch, um ramo/galho/bifurcação" />
+</figure>
 <p>
   <strong>branchs</strong>
   são

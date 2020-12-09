@@ -1,3 +1,15 @@
+<svelte:head>
+  <title>
+    O estado atual do desenvolvimento frontend - luciano@ratamero.com
+  </title>
+  <meta
+    name="description"
+    content="Nesse post, apelidado de 'parem de usar js pra tudo, caceta', falo sobre por que sinto que tá na hora de a gente ter uma conversinha sobre o estado atual do desenvolvimento frontend. :]" />
+  <meta
+    name="keywords"
+    content="Luciano Ratamero, javascript, frontend, react, webpack, es6, desespero" />
+</svelte:head>
+
 <h1><mark>O estado atual do desenvolvimento frontend</mark></h1>
 
 <p class="meta">2016-10-27</p>

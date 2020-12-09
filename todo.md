@@ -1,7 +1,7 @@
 - [x] migrar os posts com acessibilidade
-- [] migrar os posts em ingles com acessibilidade
+- [x] migrar os posts em ingles com acessibilidade
 - [x] adicionar ícones com links pros socials
-- [] adicionar title e meta tags
+- [x] adicionar title e meta tags
 - [] implementar página de talks
 - [] implementar ordenação
 - [] arrumar o manifest.json

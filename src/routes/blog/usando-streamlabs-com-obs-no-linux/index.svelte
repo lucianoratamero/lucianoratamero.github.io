@@ -1,12 +1,26 @@
+<svelte:head>
+  <title>usando streamlabs com OBS no linux - luciano@ratamero.com</title>
+  <meta
+    name="description"
+    content="nesse post, mostro como usar o Streamlabs com alertas de follow, sub e bits, dentro do OBS em uma distro Linux. chega mais :]" />
+  <meta
+    name="keywords"
+    content="Luciano Ratamero, streamlabs,obs,linux,alertas" />
+</svelte:head>
+
 <h1><mark>usando streamlabs com OBS no linux</mark></h1>
 
 <p class="meta">2019-01-04</p>
 <figure>
   <img
-    src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/streamlabs%20obs%20linux.png" alt="Logo do Streamlabs, do Linux e do OBS"/>
+    src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/streamlabs%20obs%20linux.png"
+    alt="Logo do Streamlabs, do Linux e do OBS" />
 </figure>
 
-<p><strong>edit: as versões de grande parte das distros, além da snap, já vêm com suporte a Linux Browser, então verifique antes de ler o post!</strong></p>
+<p>
+  <strong>edit: as versões de grande parte das distros, além da snap, já vêm com
+    suporte a Linux Browser, então verifique antes de ler o post!</strong>
+</p>
 
 <p>
   ultimamente eu ando assistindo a muitos canais no twitch durante meu tempo
@@ -41,7 +55,8 @@
 </p>
 <figure>
   <img
-    src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/widget-box-url.png" alt="Lugar do site onde achamos a URL da página de alertas" />
+    src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/widget-box-url.png"
+    alt="Lugar do site onde achamos a URL da página de alertas" />
 </figure>
 <p>
   com isso em mãos, tudo que a gente precisa fazer é abrir uma página web dentro
@@ -50,7 +65,8 @@
 <h3>obs-linuxbrowser</h3>
 <figure>
   <img
-    src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/obs-linuxbrowser.png" alt="obs-linuxbrowser no Github" />
+    src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/obs-linuxbrowser.png"
+    alt="obs-linuxbrowser no Github" />
 </figure>
 <p>
   o usuário
@@ -86,7 +102,8 @@
   <a
     href="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/add-input.png">
     <img
-      src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/add-input.png" alt="Onde clicar para adicionar o Input" />
+      src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/add-input.png"
+      alt="Onde clicar para adicionar o Input" />
   </a>
 </figure>
 <p>
@@ -99,7 +116,8 @@
   <a
     href="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/config-linux-browser.png">
     <img
-      src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/config-linux-browser.png" alt="Tela de config do Linux Browser" />
+      src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/config-linux-browser.png"
+      alt="Tela de config do Linux Browser" />
   </a>
 </figure>
 <p>
@@ -110,7 +128,8 @@
   <a
     href="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/test-alert.png">
     <img
-      src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/test-alert.png" alt="Teste dos alertas" />
+      src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/test-alert.png"
+      alt="Teste dos alertas" />
   </a>
 </figure>
 <p>

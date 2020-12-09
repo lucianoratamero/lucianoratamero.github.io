@@ -1,5 +1,18 @@
+<svelte:head>
+  <title>
+    porque eu trabalho remotamente - mas não culpo quem não contrata gente como
+    eu - luciano@ratamero.com
+  </title>
+  <meta
+    name="description"
+    content="eu trabalho remoto. eu amo. mas nem tudo é lindo. estou aqui, pra falar um    bocado sobre minha experiência e seus prós e contras :]" />
+  <meta
+    name="keywords"
+    content="Luciano Ratamero, trabalho, escravidão, remoto, pugs" />
+</svelte:head>
+
 <h1>
-  <mark>porque eu trabalho remotamente — mas não culpo quem não contrata gente
+  <mark>porque eu trabalho remotamente - mas não culpo quem não contrata gente
     como eu</mark>
 </h1>
 

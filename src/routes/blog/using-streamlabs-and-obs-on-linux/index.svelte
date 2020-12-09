@@ -1,12 +1,27 @@
+<svelte:head>
+  <title>using streamlabs and OBS on linux - luciano@ratamero.com</title>
+  <meta
+    name="description"
+    content="in this post, I'll show you how to use Streamlabs with alerts for follows, subs and bits, using OBS on Linux :]" />
+  <meta
+    name="keywords"
+    content="Luciano Ratamero, streamlabs,obs,linux,alerts" />
+</svelte:head>
+
 <h1><mark>using streamlabs and OBS on linux</mark></h1>
 
 <p class="meta">2019-01-03</p>
 <div class="image-wrapper">
   <img
-    src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/streamlabs%20obs%20linux.png" alt="Logos from Streamlabs, Linux and OBS" />
+    src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/streamlabs%20obs%20linux.png"
+    alt="Logos from Streamlabs, Linux and OBS" />
 </div>
 
-<p><strong>edit: most linux distros and alternative installations (like snap) currently already ship with Linux Browser enabled. be sure to check before following this guide!</strong></p>
+<p>
+  <strong>edit: most linux distros and alternative installations (like snap)
+    currently already ship with Linux Browser enabled. be sure to check before
+    following this guide!</strong>
+</p>
 
 <p>
   lately I've been watching a lot of streams on twitch. even if I'm doing
@@ -39,7 +54,8 @@
 </p>
 <div class="image-wrapper">
   <img
-    src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/widget-box-url.png" alt="Where to find the Alert Box URL" />
+    src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/widget-box-url.png"
+    alt="Where to find the Alert Box URL" />
 </div>
 <p>
   with that, all we need is to have OBS treat this web page as a real input
@@ -48,7 +64,8 @@
 <h3>obs-linuxbrowser</h3>
 <div class="image-wrapper">
   <img
-    src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/obs-linuxbrowser.png" alt="obs-linuxbrowser on Github" />
+    src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/obs-linuxbrowser.png"
+    alt="obs-linuxbrowser on Github" />
 </div>
 <p>
   the user
@@ -84,7 +101,8 @@
   <a
     href="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/add-input.png">
     <img
-      src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/add-input.png" alt="How to add an input on OBS" />
+      src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/add-input.png"
+      alt="How to add an input on OBS" />
   </a>
 </div>
 <p>
@@ -98,7 +116,8 @@
   <a
     href="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/config-linux-browser.png">
     <img
-      src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/config-linux-browser.png" alt="Config Linux Browser screen"/>
+      src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/config-linux-browser.png"
+      alt="Config Linux Browser screen" />
   </a>
 </div>
 <p>
@@ -109,7 +128,8 @@
   <a
     href="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/test-alert.png">
     <img
-      src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/test-alert.png" alt="Sample of a test alert" />
+      src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/test-alert.png"
+      alt="Sample of a test alert" />
   </a>
 </div>
 <p>

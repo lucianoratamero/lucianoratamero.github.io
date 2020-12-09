@@ -1,8 +1,21 @@
+<svelte:head>
+  <title>linux para leigos: por que usar linux? - luciano@ratamero.com</title>
+  <meta
+    name="description"
+    content="se você quer entender melhor
+    qual é a desse negócio de linux, bem, não posso te prometer nada, mas vou tentar passar pelos maiores pontos que vejo como importantes pra que você faça a transição sabendo da coisa linda que tá fazendo. chega mais :]" />
+  <meta
+    name="keywords"
+    content="Luciano Ratamero, linux, leigos, por que usar, Luciano Ratamero" />
+</svelte:head>
+
 <h1><mark>linux para leigos: por que usar linux?</mark></h1>
 
 <p class="meta">2016-06-21</p>
 <figure>
-  <img src="https://lucianoratamero.github.io/img/cover-distros.png" alt="Logos dos projetos GNU e Linux" />
+  <img
+    src="https://lucianoratamero.github.io/img/cover-distros.png"
+    alt="Logos dos projetos GNU e Linux" />
 </figure>
 <p>
   se você está lendo isso daqui, quer dizer que você já pelo menos pensou na
@@ -80,7 +93,8 @@
 </p>
 <figure>
   <img
-    src="https://lucianoratamero.github.io/img/instalador de programas.png" alt="Imagem da interface do instalador de programas" />
+    src="https://lucianoratamero.github.io/img/instalador de programas.png"
+    alt="Imagem da interface do instalador de programas" />
 </figure>
 <p>
   basicamente, toda distribuição tem seus

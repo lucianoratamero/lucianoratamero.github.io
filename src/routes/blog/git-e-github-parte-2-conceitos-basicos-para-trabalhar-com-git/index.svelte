@@ -1,8 +1,25 @@
-<h1><mark>git e github parte 2: conceitos básicos para trabalhar com git</mark></h1>
+<svelte:head>
+  <title>
+    git e github parte 2: conceitos básicos para trabalhar com git -
+    luciano@ratamero.com
+  </title>
+  <meta
+    name="description"
+    content="Esse post explica os conceitos básicos de Git e como ele interaje com o Github; tudo isso da forma mais didática possível :]" />
+  <meta
+    name="keywords"
+    content="Luciano Ratamero, git, github, conceitos básicos de git, parte 2" />
+</svelte:head>
+
+<h1>
+  <mark>git e github parte 2: conceitos básicos para trabalhar com git</mark>
+</h1>
 
 <p class="meta">2016-02-18</p>
 <figure>
-  <img src="https://lucianoratamero.github.io/img/cover-git-2.png" alt="Ilustração com logo do git e do github" />
+  <img
+    src="https://lucianoratamero.github.io/img/cover-git-2.png"
+    alt="Ilustração com logo do git e do github" />
 </figure>
 <p>
   eis que voltamos para a parte 2 dos posts sobre git e github! dessa vez, vou
@@ -21,7 +38,11 @@
   importante para que uma tarefa não influencie na outra, mas o que importa no
   final das contas é que todas as tarefas estejam prontas, juntas, entregues.
 </p>
-<figure><img src="https://lucianoratamero.github.io/img/merge.jpg" alt="Ilustração de um merge, de uma branch se encontrando com a outra" /></figure>
+<figure>
+  <img
+    src="https://lucianoratamero.github.io/img/merge.jpg"
+    alt="Ilustração de um merge, de uma branch se encontrando com a outra" />
+</figure>
 <p>
   pra isso, os branchs paralelos precisam ser misturados novamente em um só,
   usando o processo que chamamos de
@@ -51,7 +72,9 @@
   <strong>cherry-pick</strong>.
 </p>
 <figure>
-  <img src="https://lucianoratamero.github.io/img/cherry-pick.jpg" alt="Ilustração de um cherry-pick, um commit de uma branch copiado para outra" />
+  <img
+    src="https://lucianoratamero.github.io/img/cherry-pick.jpg"
+    alt="Ilustração de um cherry-pick, um commit de uma branch copiado para outra" />
 </figure>
 <p>
   <strong>cherry-pick</strong>
@@ -69,7 +92,11 @@
   no branch base. nessas horas, você pode usar o
   <strong>rebase</strong>.
 </p>
-<figure><img src="https://lucianoratamero.github.io/img/rebase.jpg" alt="Ilustração de um rebase, uma branch mudando sua base para outro commit" /></figure>
+<figure>
+  <img
+    src="https://lucianoratamero.github.io/img/rebase.jpg"
+    alt="Ilustração de um rebase, uma branch mudando sua base para outro commit" />
+</figure>
 <p>
   <strong>rebase</strong>
   é o ato de mudar o commit base de uma série de commits. ele é útil em alguns
@@ -95,7 +122,11 @@
   de
   <strong>remotes</strong>.
 </p>
-<figure><img src="https://lucianoratamero.github.io/img/remotes.jpg" alt="Ilustração de um remote, um repo apontando para múltiplas nuvens" /></figure>
+<figure>
+  <img
+    src="https://lucianoratamero.github.io/img/remotes.jpg"
+    alt="Ilustração de um remote, um repo apontando para múltiplas nuvens" />
+</figure>
 <p>
   geralmente, só temos uma origem remota pra cada projeto, mas podemos ter, por
   exemplo, um outro repositório remoto configurado para fazer o deploy da
@@ -111,7 +142,11 @@
   pode usar uma
   <strong>tag</strong>.
 </p>
-<figure><img src="https://lucianoratamero.github.io/img/tag.jpg" alt="Ilustração de uma tag" /></figure>
+<figure>
+  <img
+    src="https://lucianoratamero.github.io/img/tag.jpg"
+    alt="Ilustração de uma tag" />
+</figure>
 <p>
   uma
   <strong>tag</strong>

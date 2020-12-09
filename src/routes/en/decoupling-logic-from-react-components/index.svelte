@@ -10,6 +10,16 @@
   import image8 from "../../../img/desacoplando-a-logica-de-componentes-react/image8.png";
 </script>
 
+<svelte:head>
+  <title>Decoupling logic from react components - luciano@ratamero.com</title>
+  <meta
+    name="description"
+    content="In this post, we'll discuss how to decouple rendering from domain login using React and Redux :]" />
+  <meta
+    name="keywords"
+    content="Luciano Ratamero, react, redux, big projects, architecture, planning, frontend, javascript, frameworks" />
+</svelte:head>
+
 <h1><mark>Decoupling logic from react components</mark></h1>
 
 <p class="meta">2019-07-23</p>

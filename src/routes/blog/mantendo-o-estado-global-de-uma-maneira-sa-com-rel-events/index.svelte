@@ -6,14 +6,28 @@
   import image4 from "../../../img/mantendo-o-estado-global-de-uma-maneira-sa-com-rel-events/4-registering-component.png";
 </script>
 
+<svelte:head>
+  <title>
+    Mantendo o estado global de uma maneira sã com rel-events -
+    luciano@ratamero.com
+  </title>
+  <meta
+    name="description"
+    content="Nesse post, discutiremos como usar a rel-events para lidar com o estado global de sua app React de uma maneira mais fácil e sã :]" />
+  <meta
+    name="keywords"
+    content="Luciano Ratamero, rel-events, react, redux, grandes projetos, arquitetura, planejamento, frontend, javascript, frameworks" />
+</svelte:head>
+
 <h1><mark>Mantendo o estado global de uma maneira sã com rel-events</mark></h1>
 
 <p class="meta">2019-09-19</p>
-<figure><img src={cover} alt="Ilustração com as logos do React e do Redux" /></figure>
-  <p>
+<figure>
+  <img src={cover} alt="Ilustração com as logos do React e do Redux" />
+</figure>
+<p>
   <em>for native english speakers,
-    <a
-      href="/en/keeping-global-state-management-sane-with-rel-events/">here's
+    <a href="/en/keeping-global-state-management-sane-with-rel-events/">here's
       the translated post</a></em>
 </p>
 <p>
@@ -110,22 +124,14 @@
   ou
   <code>mapStateToProps</code>. Seria algo mais ou menos assim:
 </p>
-<figure>
-  <img
-    src={image1}
-    alt="Evento Imaginário" />
-</figure>
+<figure><img src={image1} alt="Evento Imaginário" /></figure>
 <p>
   Legal, mas onde colocaríamos todo seu comportamento? Onde tá o código que faz
   a requisição? Como lidar com casos de erro? Digamos que, além do objeto de
   evento, nós tenhamos algo que gerencia todo o fluxo do evento, que chamaríamos
   de Event Manager:
 </p>
-<figure>
-  <img
-  src={image2}
-  alt="Basic rel-events HTTPEvent" />
-</figure>
+<figure><img src={image2} alt="Basic rel-events HTTPEvent" /></figure>
 <p>
   Melhor. Mas como esse manager tá implementado? Porque, se a gente precisa
   lidar com o fluxo inteiro dentro dele, ele precisa saber de muita coisa: como
@@ -135,21 +141,13 @@
   esqueci que eu preciso de um estado inicial pra esse evento também, pra gente
   ter dados antes mesmo da requisição. Calma, calma, vamo lá:
 </p>
-<figure>
-  <img
-  src={image3}
-  alt="LoginEventManager" />
-</figure>
+<figure><img src={image3} alt="LoginEventManager" /></figure>
 <p>
   É mais ou menos isso que a gente precisa, né? Mas então, como que a gente
   faria pra registrar quais Componentes que poderiam disparar esse Evento? Como
   que o Componente pegaria os dados desse evento? Tamo quase lá:
 </p>
-<figure>
-  <img
-  src={image4}
-  alt="Registering the component" />
-</figure>
+<figure><img src={image4} alt="Registering the component" /></figure>
 <p>
   E essa é exatamente a API atual para um Evento HTTP (HTTPEvent) da lib
   <code>rel-events</code>. Nada de actions nem reducers, nada de acoplar as
