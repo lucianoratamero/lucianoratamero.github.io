@@ -73,6 +73,8 @@
     background: var(--nav-bg-color);
     box-shadow: var(--base-box-shadow);
     position: sticky;
+    max-width: 480px;
+    margin: 0 auto;
   }
 
   .paginator ul {
