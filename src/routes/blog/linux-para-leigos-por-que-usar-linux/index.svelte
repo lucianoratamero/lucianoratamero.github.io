@@ -1,3 +1,8 @@
+<script>
+  import coverdistros from "../../../img/cover-distros.png";
+  import instaladordeprogramas from "../../../img/instalador-de-programas.png";
+</script>
+
 <svelte:head>
   <title>linux para leigos: por que usar linux? - luciano@ratamero.com</title>
   <meta
@@ -12,11 +17,13 @@
 <h1><mark>linux para leigos: por que usar linux?</mark></h1>
 
 <p class="meta">2016-06-21</p>
-<figure>
-  <img
-    src="https://lucianoratamero.github.io/img/cover-distros.png"
-    alt="Logos dos projetos GNU e Linux" />
-</figure>
+<a href={coverdistros}>
+  <figure>
+    <img
+      src={coverdistros}
+      alt="Logos dos projetos GNU e Linux" />
+  </figure>
+</a>
 <p>
   se você está lendo isso daqui, quer dizer que você já pelo menos pensou na
   possibilidade de usar linux (que bonito! :D). seja por esforço de um amigo ou
@@ -25,7 +32,7 @@
   tentar passar pelos maiores argumentos pra que você faça a transição sabendo
   da coisa linda que tá fazendo. sem mais delongas, vamos começar!
 </p>
-<div class="callout text-center">
+<div class="callout">
   <p><strong>aviso:</strong></p>
   <p>
     pro povo que já sabe qual é, devo deixar só o aviso de que quando falo
@@ -91,11 +98,13 @@
   linux. leia-se somente
   <em>linux</em>)
 </p>
-<figure>
-  <img
-    src="https://lucianoratamero.github.io/img/instalador de programas.png"
-    alt="Imagem da interface do instalador de programas" />
-</figure>
+<a href={instaladordeprogramas}>
+  <figure>
+    <img
+      src={instaladordeprogramas}
+      alt="Imagem da interface do instalador de programas" />
+  </figure>
+</a>
 <p>
   basicamente, toda distribuição tem seus
   <strong>repositórios de softwares</strong>. pense nisso como o seguinte: toda

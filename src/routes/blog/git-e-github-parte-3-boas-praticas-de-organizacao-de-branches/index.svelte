@@ -1,3 +1,13 @@
+<script lang="ts">
+  import covergit3 from "../../../img/cover-git-3.png";
+  import master from "../../../img/master.jpg";
+  import develop from "../../../img/develop.jpg";
+  import release from "../../../img/release.jpg";
+  import hotfix from "../../../img/hotfix.jpg";
+  import feature from "../../../img/feature.jpg";
+  import topic from "../../../img/topic.jpg";
+</script>
+
 <svelte:head>
   <title>
     git e github parte 3: boas práticas de organização de branches -
@@ -16,17 +26,17 @@
 </h1>
 
 <p class="meta">2016-02-19</p>
-<figure>
-  <img
-    src="https://lucianoratamero.github.io/img/cover-git-3.png"
-    alt="Ilustração com logo do git e do github" />
-</figure>
+<a href={covergit3}>
+  <figure>
+    <img src={covergit3} alt="Ilustração com logo do git e do github" />
+  </figure>
+</a>
 <p>
   chegamos à parte 3 dos posts sobre git e github! nos
   <a
-    href="https://lucianoratamero.github.io/blog/git-e-github-parte-1-o-que-sao-e-como-usar/">outros</a>
+    href="https://www.ratamero.com/blog/git-e-github-parte-1-o-que-sao-e-como-usar/">outros</a>
   <a
-    href="https://lucianoratamero.github.io/blog/git-e-github-parte-2-conceitos-basicos-para-trabalhar-com-git/">dois</a>,
+    href="https://www.ratamero.com/blog/git-e-github-parte-2-conceitos-basicos-para-trabalhar-com-git/">dois</a>,
   falei sobre o que são o git e o github e slguns conceitos básicos pra começar
   a usar o git. hoje, vou falar mais sobre algumas boas práticas pra organização
   de branches, baseado nas sugestões do
@@ -57,11 +67,13 @@
   </p>
 </div>
 <h3>branch <code>master/main</code></h3>
-<figure>
-  <img
-    src="https://lucianoratamero.github.io/img/master.jpg"
-    alt="Ilustração de uma branch principal, chamada master ou main" />
-</figure>
+<a href={master}>
+  <figure>
+    <img
+      src={master}
+      alt="Ilustração de uma branch principal, chamada master ou main" />
+  </figure>
+</a>
 <p>
   o branch
   <code>master</code>
@@ -78,11 +90,13 @@
   <code>hotfix</code>.
 </p>
 <h3>branch <code>develop</code></h3>
-<figure>
-  <img
-    src="https://lucianoratamero.github.io/img/develop.jpg"
-    alt="Ilustração de uma branch paralela à principal, chamada develop" />
-</figure>
+<a href={develop}>
+  <figure>
+    <img
+      src={develop}
+      alt="Ilustração de uma branch paralela à principal, chamada develop" />
+  </figure>
+</a>
 <p>
   o branch
   <code>develop</code>
@@ -98,11 +112,13 @@
   por causa de instabilidade de outras.
 </p>
 <h3>branches de <code>release</code></h3>
-<figure>
-  <img
-    src="https://lucianoratamero.github.io/img/release.jpg"
-    alt="Ilustração de uma branch saindo de develop e dando merge na principal" />
-</figure>
+<a href={develop}>
+  <figure>
+    <img
+      src={release}
+      alt="Ilustração de uma branch saindo de develop e dando merge na principal" />
+  </figure>
+</a>
 <p>
   os branches de
   <code>release</code>
@@ -132,11 +148,13 @@
   já salvou minha vida algumas vezes. ;)
 </p>
 <h3>branches de <code>hotfix</code></h3>
-<figure>
-  <img
-    src="https://lucianoratamero.github.io/img/hotfix.jpg"
-    alt="Ilustração de uma branch saindo da principal e dando merge na principal e na develop" />
-</figure>
+<a href={hotfix}>
+  <figure>
+    <img
+      src={hotfix}
+      alt="Ilustração de uma branch saindo da principal e dando merge na principal e na develop" />
+  </figure>
+</a>
 <p>
   os branches de
   <code>hotfix</code>
@@ -153,11 +171,13 @@
   corrigido.
 </p>
 <h3>branches de <code>feature</code></h3>
-<figure>
-  <img
-    src="https://lucianoratamero.github.io/img/feature.jpg"
-    alt="Ilustração de uma branch saindo da develop e dando merge na develop" />
-</figure>
+<a href={feature}>
+  <figure>
+    <img
+      src={feature}
+      alt="Ilustração de uma branch saindo da develop e dando merge na develop" />
+  </figure>
+</a>
 <p>
   os branches de
   <code>feature</code>
@@ -176,11 +196,13 @@
   tamanho que permita a fácil revisão do código por outras pessoas.
 </p>
 <h3>branches de <code>topic</code></h3>
-<figure>
-  <img
-    src="https://lucianoratamero.github.io/img/topic.jpg"
-    alt="Ilustração de uma branch saindo de uma feature e mergeando na mesma" />
-</figure>
+<a href={topic}>
+  <figure>
+    <img
+      src={topic}
+      alt="Ilustração de uma branch saindo de uma feature e mergeando na mesma" />
+  </figure>
+</a>
 <p>
   os branches de
   <code>topic</code>

@@ -36,7 +36,7 @@
 <p>
   <em>for native english speakers,
     <a
-      href="https://lucianoratamero.github.io/blog/halp-virtualenv-and-virtualenvwrapper/">here's
+      href="https://www.ratamero.com/blog/halp-virtualenv-and-virtualenvwrapper/">here's
       the translated post</a></em>
 </p>
 <h3>o que é o virtualenvwrapper</h3>

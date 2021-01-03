@@ -1,3 +1,12 @@
+<script>
+  import streamlabsobslinux from "../../../img/usando-streamlabs-com-obs-no-linux/streamlabs-obs-linux.png";
+  import widgetboxurl from "../../../img/usando-streamlabs-com-obs-no-linux/widget-box-url.png";
+  import obslinuxbrowser from "../../../img/usando-streamlabs-com-obs-no-linux/obs-linuxbrowser.png";
+  import addinput from "../../../img/usando-streamlabs-com-obs-no-linux/add-input.png";
+  import configlinuxbrowser from "../../../img/usando-streamlabs-com-obs-no-linux/config-linux-browser.png";
+  import testalert from "../../../img/usando-streamlabs-com-obs-no-linux/test-alert.png";
+</script>
+
 <svelte:head>
   <title>usando streamlabs com OBS no linux - luciano@ratamero.com</title>
   <meta
@@ -11,11 +20,11 @@
 <h1><mark>usando streamlabs com OBS no linux</mark></h1>
 
 <p class="meta">2019-01-04</p>
-<figure>
-  <img
-    src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/streamlabs%20obs%20linux.png"
-    alt="Logo do Streamlabs, do Linux e do OBS" />
-</figure>
+<a href={streamlabsobslinux}>
+  <figure>
+    <img src={streamlabsobslinux} alt="Logo do Streamlabs, do Linux e do OBS" />
+  </figure>
+</a>
 
 <p>
   <strong>edit: as versões de grande parte das distros, além da snap, já vêm com
@@ -53,21 +62,21 @@
   <strong>Alert Box</strong>. nessa página, você terá a opção de copiar a url da
   página de alertas.
 </p>
-<figure>
-  <img
-    src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/widget-box-url.png"
-    alt="Lugar do site onde achamos a URL da página de alertas" />
-</figure>
+<a href={widgetboxurl}>
+  <figure>
+    <img
+      src={widgetboxurl}
+      alt="Lugar do site onde achamos a URL da página de alertas" />
+  </figure>
+</a>
 <p>
   com isso em mãos, tudo que a gente precisa fazer é abrir uma página web dentro
   do OBS como uma fonte de vídeo. é aí que entra o pulo do gato.
 </p>
 <h3>obs-linuxbrowser</h3>
-<figure>
-  <img
-    src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/obs-linuxbrowser.png"
-    alt="obs-linuxbrowser no Github" />
-</figure>
+<a href={obslinuxbrowser}>
+  <figure><img src={obslinuxbrowser} alt="obslinuxbrowser no Github" /></figure>
+</a>
 <p>
   o usuário
   <a href="https://github.com/bazukas/">bazukas</a>
@@ -99,11 +108,8 @@
   <strong>Linux Browser</strong>.
 </p>
 <figure>
-  <a
-    href="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/add-input.png">
-    <img
-      src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/add-input.png"
-      alt="Onde clicar para adicionar o Input" />
+  <a href={addinput}>
+    <img src={addinput} alt="Onde clicar para adicionar o Input" />
   </a>
 </figure>
 <p>
@@ -113,11 +119,8 @@
   <strong>Alert Box</strong>.
 </p>
 <figure>
-  <a
-    href="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/config-linux-browser.png">
-    <img
-      src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/config-linux-browser.png"
-      alt="Tela de config do Linux Browser" />
+  <a href={configlinuxbrowser}>
+    <img src={configlinuxbrowser} alt="Tela de config do Linux Browser" />
   </a>
 </figure>
 <p>
@@ -125,12 +128,7 @@
   primeira!
 </p>
 <figure>
-  <a
-    href="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/test-alert.png">
-    <img
-      src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/test-alert.png"
-      alt="Teste dos alertas" />
-  </a>
+  <a href={testalert}> <img src={testalert} alt="Teste dos alertas" /> </a>
 </figure>
 <p>
   por hoje é só! se tiverem dicas ou sugestões pra melhorar esse texto, só me

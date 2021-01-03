@@ -3,6 +3,7 @@
   import { javascript, python, shell } from "svelte-highlight/languages";
   import { formatCodeString } from "../../../utils";
   import { stores } from "@sapper/app";
+  import tippy from "sveltejs-tippy";
 
   const { page } = stores();
 </script>
@@ -97,7 +98,7 @@
   seguir a
   <span
     class="tip"
-    title="<strong>indentação</strong>: recuo de um texto em relação a sua margem. ou seja, o número de espaços ou tabs antes de uma linha de código.">indentação
+    use:tippy={{ content: '<strong>indentação</strong>: recuo de um texto em relação a sua margem. ou seja, o número de espaços ou tabs antes de uma linha de código.', allowHTML: true }}>indentação
     do código</span>
   pode fazer com que ele nem rode. isso se dá porque o python usa a indentação
   para definir blocos, no lugar das chaves do javascript.
@@ -170,9 +171,9 @@ print(x)
 <Highlight
   language={javascript}
   code={formatCodeString(`
-if (x &gt; 1) {
+if (x > 1) {
     console.log('oi');
-} else if (!x &gt; 1) {
+} else if (!x > 1) {
     console.log('io');
 } else {
     console.log('ioi');
@@ -184,9 +185,9 @@ if (x &gt; 1) {
 <Highlight
   language={python}
   code={formatCodeString(`
-if x &gt; 1:
+if x > 1:
     print('oi')
-elif not x &gt; 1:
+elif not x > 1:
     # 'elif' em vez de 'else if', 'not' em vez de '!'
     print('io')
 else:
@@ -200,7 +201,7 @@ else:
 <Highlight
   language={javascript}
   code={formatCodeString(`
-while (x &lt; 3){
+while (x < 3){
   x++;
 }
 `)} />
@@ -210,7 +211,7 @@ while (x &lt; 3){
 <Highlight
   language={python}
   code={formatCodeString(`
-while x &lt; 3:
+while x < 3:
     x += 1
 `)} />
 
@@ -220,7 +221,7 @@ while x &lt; 3:
   em python, ao
   <span
     class="tip"
-    title="<strong>iterar:</strong> pegar ítem a ítem de uma lista e executar alguma ação, geralmente sobre o próprio ítem.">iterar</span>
+    use:tippy={{ content: '<strong>iterar:</strong> pegar ítem a ítem de uma lista e executar alguma ação, geralmente sobre o próprio ítem.', allowHTML: true }}>iterar</span>
   sobre uma lista, não precisamos declarar o índice ou resgatar o objeto
   internamente - o objeto da vez já está implícito.
 </p>
@@ -231,7 +232,7 @@ while x &lt; 3:
   language={javascript}
   code={formatCodeString(`
 var lista = [1, 2, 3];
-for (var i=0; i &lt; lista.length; i++){
+for (var i=0; i < lista.length; i++){
   var item = lista[i];
   console.log(item); // 1; 2; 3
 }
@@ -362,7 +363,7 @@ len([1, 2, 3]) # 3
   language={python}
   code={formatCodeString(`
 lista = [1, 2, 3, 4]
-maiores_que_2 = [numero for numero in lista if numero &gt; 2]
+maiores_que_2 = [numero for numero in lista if numero > 2]
 # maiores_que_2 é agora [3, 4]
 `)} />
 
@@ -441,11 +442,14 @@ pessoa.get('gênero', 'não-binário')
 def func_tainha(a, other_func):
     print(a)
     other_func()
+
 def another_func():
     print('marilene')
+
 func_tainha('olá', another_func)
 # olá
 # marilene
+
 func_tainha.vinho = 'sinuelo'
 print(func_tainha.vinho)
 # sinuelo
@@ -492,6 +496,7 @@ import qualquercoisa
 # importando o módulo inteiro
 qualquercoisa.dizer_quelquercoisa()
 # qualquercoisa
+
 from qualquercoisa import dizer_quelquercoisa
 # importando apenas a função 'dizer_quelquercoisa'
 dizer_quelquercoisa()
@@ -519,6 +524,7 @@ dizer_quelquercoisa()
 class Animal:
     # qualquer variável definida aqui será uma propriedade da classe
     idade_inicial = 1
+
     def __init__(self, nome, especie='humano'):
         # aqui, declaramos que, ao criar um animal, podemos passar um nome e espécie pra ele
         # se não passarmos uma espécie, por padrão, ela será 'humano'
@@ -526,9 +532,11 @@ class Animal:
         self.nome = nome
         self.especie = especie
         self.idade = self.idade_inicial
+
     def comemorar_aniversario(self):
         # ao comemorar aniversário, acrescentamos 1 à idade
         self.idade += 1
+
     def falar(self):
         # se for um humano, ele fala besteira
         if self.especie == 'humano':
@@ -545,9 +553,11 @@ class Animal:
 jorge = Animal('Jorge')
 jorge.idade
 # 1
+
 jorge.comemorar_aniversario()
 jorge.idade
 # 2
+
 jorge.falar()
 # blablablawhiskassachê
 `)} />
@@ -580,9 +590,11 @@ girafa_nova = Girafa()
 # não precisamos mais passar nome
 girafa.idade
 # 1
+
 girafa.comemorar_aniversario()
 girafa.idade
 # 2
+
 girafa.falar()
 #
 # isso mesmo, girafa não fala,

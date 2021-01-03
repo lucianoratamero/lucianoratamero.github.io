@@ -1,3 +1,12 @@
+<script>
+  import streamlabsobslinux from "../../../img/usando-streamlabs-com-obs-no-linux/streamlabs-obs-linux.png";
+  import widgetboxurl from "../../../img/usando-streamlabs-com-obs-no-linux/widget-box-url.png";
+  import obslinuxbrowser from "../../../img/usando-streamlabs-com-obs-no-linux/obs-linuxbrowser.png";
+  import addinput from "../../../img/usando-streamlabs-com-obs-no-linux/add-input.png";
+  import configlinuxbrowser from "../../../img/usando-streamlabs-com-obs-no-linux/config-linux-browser.png";
+  import testalert from "../../../img/usando-streamlabs-com-obs-no-linux/test-alert.png";
+</script>
+
 <svelte:head>
   <title>using streamlabs and OBS on linux - luciano@ratamero.com</title>
   <meta
@@ -11,11 +20,9 @@
 <h1><mark>using streamlabs and OBS on linux</mark></h1>
 
 <p class="meta">2019-01-03</p>
-<div class="image-wrapper">
-  <img
-    src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/streamlabs%20obs%20linux.png"
-    alt="Logos from Streamlabs, Linux and OBS" />
-</div>
+<a href={streamlabsobslinux}>
+  <img src={streamlabsobslinux} alt="Logos from Streamlabs, Linux and OBS" />
+</a>
 
 <p>
   <strong>edit: most linux distros and alternative installations (like snap)
@@ -52,21 +59,21 @@
   <strong>Alert Box</strong>
   and you'll have the option to copy the url to your Alert Box page.
 </p>
-<div class="image-wrapper">
+<a href={widgetboxurl}>
   <img
-    src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/widget-box-url.png"
+    src={widgetboxurl}
     alt="Where to find the Alert Box URL" />
-</div>
+</a>
 <p>
   with that, all we need is to have OBS treat this web page as a real input
   device. it's here that the magic happens.
 </p>
 <h3>obs-linuxbrowser</h3>
-<div class="image-wrapper">
+<a href={obslinuxbrowser}>
   <img
-    src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/obs-linuxbrowser.png"
+    src={obslinuxbrowser}
     alt="obs-linuxbrowser on Github" />
-</div>
+</a>
 <p>
   the user
   <a href="https://github.com/bazukas/">bazukas</a>
@@ -97,14 +104,11 @@
   called
   <strong>Linux Browser</strong>.
 </p>
-<div class="image-wrapper">
-  <a
-    href="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/add-input.png">
-    <img
-      src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/add-input.png"
-      alt="How to add an input on OBS" />
-  </a>
-</div>
+<a href={addinput}>
+  <img
+    src={addinput}
+    alt="How to add an input on OBS" />
+</a>
 <p>
   you just need to add it by clicking on +, then
   <strong>Linux Browser</strong>
@@ -112,26 +116,20 @@
   <strong>Alert Box</strong>
   url in the URL field.
 </p>
-<div class="image-wrapper">
-  <a
-    href="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/config-linux-browser.png">
-    <img
-      src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/config-linux-browser.png"
-      alt="Config Linux Browser screen" />
-  </a>
-</div>
+<a href={configlinuxbrowser}>
+  <img
+    src={configlinuxbrowser}
+    alt="Config Linux Browser screen" />
+</a>
 <p>
   you could test if the alerts are appearing on OBS by going to streamlabs and
   clicking the test buttons!
 </p>
-<div class="image-wrapper">
-  <a
-    href="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/test-alert.png">
-    <img
-      src="https://www.ratamero.com/img/usando-streamlabs-com-obs-no-linux/test-alert.png"
-      alt="Sample of a test alert" />
-  </a>
-</div>
+<a href={testalert}>
+  <img
+    src={testalert}
+    alt="Sample of a test alert" />
+</a>
 <p>
   that's it for today! if you have any tips or suggestions on how to improve
   this post, just ping me in the comments section. see you!

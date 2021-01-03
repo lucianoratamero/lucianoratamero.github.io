@@ -102,7 +102,7 @@ const posts = [
       discutir alguns conceitos básicos necessários para quem quer trabalhar com
       git. se ainda não leu o primeiro post,
       <a
-        href="http://lucianoratamero.github.io/blog/git-e-github-parte-1-o-que-sao-e-como-usar/">façam
+        href="http://www.ratamero.com/blog/git-e-github-parte-1-o-que-sao-e-como-usar/">façam
         o favor</a>, porque não vou explicar de novo (#ranzinza). então vamos lá!
     </p>
     `,
@@ -115,9 +115,9 @@ const posts = [
     <p>
       chegamos à parte 3 dos posts sobre git e github! nos
       <a
-        href="http://lucianoratamero.github.io/blog/git-e-github-parte-1-o-que-sao-e-como-usar/">outros</a>
+        href="http://www.ratamero.com/blog/git-e-github-parte-1-o-que-sao-e-como-usar/">outros</a>
       <a
-        href="http://lucianoratamero.github.io/blog/git-e-github-parte-2-conceitos-basicos-para-trabalhar-com-git/">dois</a>,
+        href="http://www.ratamero.com/blog/git-e-github-parte-2-conceitos-basicos-para-trabalhar-com-git/">dois</a>,
       falei sobre o que são o git e o github e slguns conceitos básicos pra começar
       a usar o git. hoje, vou falar mais sobre algumas boas práticas pra organização
       de branches, baseado nas sugestões do

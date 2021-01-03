@@ -124,12 +124,6 @@
   fácil de manter e mais próximo do que um backend seria capaz de fazer - o que
   melhora em muito a facilidade de ter um projeto fácil de manter em longa data.
 </p>
-<p>
-  sobre alguns detalhes desse tipo de pensamento, dêem uma olhada no
-  <a
-    href="http://lucianoratamero.github.io/blog/a-jquery-nao-e-a-vila-voce-e-uma-discussao-sobre-o-uso-da-jquery-em-grandes-projetos/"
-    target="_blank">meu post sobre o uso da jQuery em grandes projetos</a>.
-</p>
 <h4>custo de carregamento e processamento</h4>
 <p>
   uma das grandes naturezas de fazer projetos somente com js é o fato de que,

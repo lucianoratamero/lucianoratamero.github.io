@@ -177,6 +177,15 @@ pre.hljs code:before {
   margin-top: 0.8em;
 }
 
+.tip {
+  cursor: pointer;
+  text-decoration: underline var(--link-color);
+}
+
+body .tippy-box {
+  text-align: center;
+}
+
 .blog-post h2,
 .blog-post h3,
 .blog-post h4,

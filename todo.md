@@ -11,8 +11,8 @@
 - [x] adicionar spinner de loading
 - [x] implementar light mode
 - [x] implementar callout
-- [] adicionar link para imagens de posts
-- [] implementar tooltip
+- [x] implementar tooltip
+- [x] adicionar link para imagens de posts
 - [] deploy
 - [] migrar código que tá em imagens pra highlightjs
 - [] experimentar cards com resumos dos posts

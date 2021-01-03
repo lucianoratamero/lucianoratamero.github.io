@@ -1,3 +1,15 @@
+<script lang="ts">
+  import covergit1 from "../../../img/cover-git-1.png";
+  import git_logo from "../../../img/git_logo.png";
+  import github_logo from "../../../img/github_logo.png";
+  import commit from "../../../img/commit.jpg";
+  import repositorio from "../../../img/repositorio.jpg";
+  import clone from "../../../img/clone.jpg";
+  import fork from "../../../img/fork.jpg";
+  import pull_request from "../../../img/pull_request.jpg";
+  import branch from "../../../img/branch.jpg";
+</script>
+
 <svelte:head>
   <title>
     git e github parte 1: o que são e como usar? - luciano@ratamero.com
@@ -13,11 +25,11 @@
 <h1><mark>git e github parte 1: o que são e como usar?</mark></h1>
 
 <p class="meta">2016-02-14</p>
-<figure>
-  <img
-    src="https://lucianoratamero.github.io/img/cover-git-1.png"
-    alt="Ilustração com logo do git e do github" />
-</figure>
+<a href={covergit1}>
+  <figure>
+    <img src={covergit1} alt="Ilustração com logo do git e do github" />
+  </figure>
+</a>
 <p>
   hoje eu tava conversando com uns amigos sobre git e github e percebemos um
   problema: não temos atualmente um lugar com conteúdo sobre os dois em
@@ -28,11 +40,9 @@
 <hr />
 
 <h3>o que é o git?</h3>
-<figure>
-  <img
-    src="https://lucianoratamero.github.io/img/git_logo.png"
-    alt="Logo do Git" />
-</figure>
+<a href={git_logo}>
+  <figure><img src={git_logo} alt="Logo do Git" /></figure>
+</a>
 <p>
   <a href="https://git-scm.com/">git</a>
   é uma
@@ -64,11 +74,9 @@
   ele funciona daqui a pouco, mas, antes, tenho que explicar o que é o github.
 </p>
 <h3>o que é o github?</h3>
-<figure>
-  <img
-    src="https://lucianoratamero.github.io/img/github_logo.png"
-    alt="Logo do Github" />
-</figure>
+<a href={github_logo}>
+  <figure><img src={github_logo} alt="Logo do Github" /></figure>
+</a>
 <p>
   <a href="https://github.com/">github</a>
   é só um
@@ -90,7 +98,7 @@
   ou
   <em>issues</em>), dentre outras. vou detalhar um pouco melhor daqui a pouco.
 </p>
-<div class="callout text-center">
+<div class="callout">
   <p><strong>lembrem-se:</strong></p>
   <p>
     a diferença entre git e github é que
@@ -125,11 +133,11 @@
   salva com seu nome, seu email, data da alteração, suas alterações na pasta e
   uma descrição da alteração, que você mesmo escreve.
 </p>
-<figure>
-  <img
-    src="https://lucianoratamero.github.io/img/commit.jpg"
-    alt="Ilustração de um registro de commit" />
-</figure>
+<a href={commit}>
+  <figure>
+    <img src={commit} alt="Ilustração de um registro de commit" />
+  </figure>
+</a>
 <p>
   então, na hora que você coloca os textos na pasta pela primeira vez, você cria
   um commit com a descrição "adiciona os textos que tenho agora", seleciona
@@ -168,11 +176,13 @@
   <strong>commits</strong>
   pra lá.
 </p>
-<figure>
-  <img
-    src="https://lucianoratamero.github.io/img/repositorio.jpg"
-    alt="Ilustração de um repositório, como se fosse nuvem" />
-</figure>
+<a href={repositorio}>
+  <figure>
+    <img
+      src={repositorio}
+      alt="Ilustração de um repositório, como se fosse nuvem" />
+  </figure>
+</a>
 <h3>
   legal, agora tenho os meus textos salvos no github. que que eu faço com isso?
 </h3>
@@ -190,11 +200,11 @@
   <strong>outro</strong>
   repositório. relaxa, pra isso serve a clonagem de repositórios.
 </p>
-<figure>
-  <img
-    src="https://lucianoratamero.github.io/img/clone.jpg"
-    alt="Ilustração de um clone de um repo, uma cópia" />
-</figure>
+<a href={clone}>
+  <figure>
+    <img src={clone} alt="Ilustração de um clone de um repo, uma cópia" />
+  </figure>
+</a>
 <p>
   <strong>clonar</strong>
   um repositório significa
@@ -230,11 +240,9 @@
   textos é criar o que chamamos de
   <strong>fork</strong>.
 </p>
-<figure>
-  <img
-    src="https://lucianoratamero.github.io/img/fork.jpg"
-    alt="Ilustração de um fork" />
-</figure>
+<a href={fork}>
+  <figure><img src={fork} alt="Ilustração de um fork" /></figure>
+</a>
 <p>
   um
   <strong>fork</strong>
@@ -293,11 +301,11 @@
   outro lugar; você comenta no pull request dizendo que precisa alterar no outro
   lugar.
 </p>
-<figure>
-  <img
-    src="https://lucianoratamero.github.io/img/pull_request.jpg"
-    alt="Ilustração de um pull request" />
-</figure>
+<a href={pull_request}>
+  <figure>
+    <img src={pull_request} alt="Ilustração de um pull request" />
+  </figure>
+</a>
 <p>
   esse detalhe deixa claro que
   <strong>pull requests também são issues</strong>. ambos são
@@ -318,11 +326,13 @@
   <strong>dois branchs</strong>
   (tecnicamente, três, porque tem o branch base, né).
 </p>
-<figure>
-  <img
-    src="https://lucianoratamero.github.io/img/branch.jpg"
-    alt="Ilustração de uma branch, um ramo/galho/bifurcação" />
-</figure>
+<a href={branch}>
+  <figure>
+    <img
+      src={branch}
+      alt="Ilustração de uma branch, um ramo/galho/bifurcação" />
+  </figure>
+</a>
 <p>
   <strong>branchs</strong>
   são

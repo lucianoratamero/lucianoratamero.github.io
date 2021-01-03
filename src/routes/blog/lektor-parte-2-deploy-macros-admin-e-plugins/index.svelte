@@ -2,6 +2,9 @@
   import Highlight from "../../../components/Highlight.svelte";
   import { django, yaml } from "svelte-highlight/languages";
   import { formatCodeString } from "../../../utils";
+  import coverlektor2 from "../../../img/cover-lektor-2.png";
+  import acessandooadmin from "../../../img/acessando-o-admin.jpg";
+  import admin from "../../../img/admin.jpg";
 </script>
 
 <svelte:head>
@@ -21,7 +24,7 @@
 <p class="meta">2016-02-03</p>
 <figure>
   <a target="_blank" href="https://getlektor.com/"><img
-      src="https://lucianoratamero.github.io/img/cover-lektor-2.png"
+      src={coverlektor2}
       alt="Lektor's logo" /></a>
 </figure>
 <p>
@@ -140,17 +143,21 @@ target = ghpages+https://lucianoratamero/blog
   <code>localhost:5000</code>
   e clicar no ícone do lápis do canto da tela.
 </p>
-<figure>
-  <img
-    src="https://lucianoratamero.github.io/img/acessando-o-admin.jpg"
-    alt="Mostrando o link do admin no topo direito da tela" />
-</figure>
+<a href={acessandooadmin}>
+  <figure>
+    <img
+      src={acessandooadmin}
+      alt="Mostrando o link do admin no topo direito da tela" />
+  </figure>
+</a>
 <p>isso te levará pra uma página do admin similar à essa:</p>
-<figure>
-  <img
-    src="https://lucianoratamero.github.io/img/admin.jpg"
-    alt="Exemplo de página de admin" />
-</figure>
+<a href={admin}>
+  <figure>
+    <img
+      src={admin}
+      alt="Exemplo de página de admin" />
+  </figure>
+</a>
 <p>
   todas as alterações feitas nela refletirão nos seus arquivos do projeto e
   vice-versa. fica na sua preferência utilizar a interface administrativa ou

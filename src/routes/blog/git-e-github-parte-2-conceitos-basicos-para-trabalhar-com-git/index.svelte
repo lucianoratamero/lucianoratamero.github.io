@@ -1,3 +1,12 @@
+<script lang="ts">
+  import covergit2 from "../../../img/cover-git-2.png";
+  import merge from "../../../img/merge.jpg";
+  import cherrypick from "../../../img/cherry-pick.jpg";
+  import rebase from "../../../img/rebase.jpg";
+  import remotes from "../../../img/remotes.jpg";
+  import tag from "../../../img/tag.jpg";
+</script>
+
 <svelte:head>
   <title>
     git e github parte 2: conceitos básicos para trabalhar com git -
@@ -16,17 +25,17 @@
 </h1>
 
 <p class="meta">2016-02-18</p>
-<figure>
-  <img
-    src="https://lucianoratamero.github.io/img/cover-git-2.png"
-    alt="Ilustração com logo do git e do github" />
-</figure>
+<a href={covergit2}>
+  <figure>
+    <img src={covergit2} alt="Ilustração com logo do git e do github" />
+  </figure>
+</a>
 <p>
   eis que voltamos para a parte 2 dos posts sobre git e github! dessa vez, vou
   discutir alguns conceitos básicos necessários para quem quer trabalhar com
   git. se ainda não leu o primeiro post,
   <a
-    href="https://lucianoratamero.github.io/blog/git-e-github-parte-1-o-que-sao-e-como-usar/">façam
+    href="https://www.ratamero.com/blog/git-e-github-parte-1-o-que-sao-e-como-usar/">façam
     o favor</a>, porque não vou explicar de novo (#ranzinza). então vamos lá!
 </p>
 <hr />
@@ -38,11 +47,13 @@
   importante para que uma tarefa não influencie na outra, mas o que importa no
   final das contas é que todas as tarefas estejam prontas, juntas, entregues.
 </p>
-<figure>
-  <img
-    src="https://lucianoratamero.github.io/img/merge.jpg"
-    alt="Ilustração de um merge, de uma branch se encontrando com a outra" />
-</figure>
+<a href={merge}>
+  <figure>
+    <img
+      src={merge}
+      alt="Ilustração de um merge, de uma branch se encontrando com a outra" />
+  </figure>
+</a>
 <p>
   pra isso, os branchs paralelos precisam ser misturados novamente em um só,
   usando o processo que chamamos de
@@ -71,11 +82,13 @@
   podemos usar o
   <strong>cherry-pick</strong>.
 </p>
-<figure>
-  <img
-    src="https://lucianoratamero.github.io/img/cherry-pick.jpg"
-    alt="Ilustração de um cherry-pick, um commit de uma branch copiado para outra" />
-</figure>
+<a href={cherrypick}>
+  <figure>
+    <img
+      src={cherrypick}
+      alt="Ilustração de um cherry-pick, um commit de uma branch copiado para outra" />
+  </figure>
+</a>
 <p>
   <strong>cherry-pick</strong>
   é o processo de pegar um commit específico, ou uma série de commits, e
@@ -92,11 +105,13 @@
   no branch base. nessas horas, você pode usar o
   <strong>rebase</strong>.
 </p>
-<figure>
-  <img
-    src="https://lucianoratamero.github.io/img/rebase.jpg"
-    alt="Ilustração de um rebase, uma branch mudando sua base para outro commit" />
-</figure>
+<a href={rebase}>
+  <figure>
+    <img
+      src={rebase}
+      alt="Ilustração de um rebase, uma branch mudando sua base para outro commit" />
+  </figure>
+</a>
 <p>
   <strong>rebase</strong>
   é o ato de mudar o commit base de uma série de commits. ele é útil em alguns
@@ -122,11 +137,13 @@
   de
   <strong>remotes</strong>.
 </p>
-<figure>
-  <img
-    src="https://lucianoratamero.github.io/img/remotes.jpg"
-    alt="Ilustração de um remote, um repo apontando para múltiplas nuvens" />
-</figure>
+<a href={remotes}>
+  <figure>
+    <img
+      src={remotes}
+      alt="Ilustração de um remote, um repo apontando para múltiplas nuvens" />
+  </figure>
+</a>
 <p>
   geralmente, só temos uma origem remota pra cada projeto, mas podemos ter, por
   exemplo, um outro repositório remoto configurado para fazer o deploy da
@@ -142,11 +159,9 @@
   pode usar uma
   <strong>tag</strong>.
 </p>
-<figure>
-  <img
-    src="https://lucianoratamero.github.io/img/tag.jpg"
-    alt="Ilustração de uma tag" />
-</figure>
+<a href={tag}>
+  <figure><img src={tag} alt="Ilustração de uma tag" /></figure>
+</a>
 <p>
   uma
   <strong>tag</strong>
