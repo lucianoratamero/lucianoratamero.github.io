@@ -167,3 +167,33 @@ pre.hljs code:before {
 .blog-post .meta {
   margin: 0.4rem auto;
 }
+
+.callout {
+  background-color: var(--code-bg-color);
+  padding: 0.8rem;
+  padding-left: 1.6rem;
+  border-radius: 0.4rem;
+  box-shadow: var(--base-box-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.callout::before {
+  display: block;
+  height: 100%;
+  width: 0.4rem;
+  background-color: var(--link-color);
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: " ";
+}
+
+.callout p {
+  margin: 0;
+  margin-top: 0.4rem;
+}
+
+.callout p:first-child {
+  margin-top: 0;
+}
