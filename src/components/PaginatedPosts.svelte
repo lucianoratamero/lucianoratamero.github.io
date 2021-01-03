@@ -60,7 +60,9 @@
 </section>
 
 <style>
-h1 { margin-bottom: 1.2rem;}
+  h1 {
+    margin-bottom: 1.2rem;
+  }
 
   .posts {
     margin: 0 0 1em 0;
