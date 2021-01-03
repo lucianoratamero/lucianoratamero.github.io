@@ -1,48 +1,8 @@
 <script lang="ts">
-  import { onDestroy, onMount } from "svelte";
-
-  import theme from "../stores/theme";
-
   export let segment: string;
-
-  let darkThemeEnabled = $theme === "dark";
-  let hideNav = false;
-  let currentScrollTop;
-
-  // const hideNavOnScroll = () => {
-  //   const { scrollTop, offsetHeight, clientHeight } = document.documentElement;
-
-  //   const scrolledDownwards = scrollTop > currentScrollTop;
-  //   const hasReachedBottom = scrollTop + clientHeight + 80 > offsetHeight;
-
-  //   if (!hideNav && scrolledDownwards && !hasReachedBottom) {
-  //     hideNav = true;
-  //   } else if (hideNav && (hasReachedBottom || !scrolledDownwards)) {
-  //     hideNav = false;
-  //   }
-
-  //   currentScrollTop = document.documentElement.scrollTop;
-  // };
-
-  // onMount(() => {
-  //   if (typeof window !== "undefined") {
-  //     window.addEventListener("scroll", hideNavOnScroll);
-  //   }
-  // });
-
-  // onDestroy(() => {
-  //   if (typeof window !== "undefined") {
-  //     window && window.removeEventListener("scroll", hideNavOnScroll);
-  //   }
-  // });
-
-  $: {
-    if (darkThemeEnabled) $theme = "dark";
-    else $theme = "light";
-  }
 </script>
 
-<nav class:hide-nav={hideNav}>
+<nav>
   <ul>
     <li>
       <a
@@ -133,7 +93,7 @@
 
   a:hover,
   [aria-current] {
-    color: #000;
+    color: var(--background-color);
   }
 
   a:hover::after {
