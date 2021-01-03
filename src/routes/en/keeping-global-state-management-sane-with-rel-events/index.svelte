@@ -1,4 +1,7 @@
 <script lang="ts">
+  import Highlight from "../../../components/Highlight.svelte";
+  import { javascript } from "svelte-highlight/languages";
+  import { formatCodeString } from "../../../utils";
   import cover from "../../../img/mantendo-o-estado-global-de-uma-maneira-sa-com-rel-events/cover.png";
   import image1 from "../../../img/mantendo-o-estado-global-de-uma-maneira-sa-com-rel-events/1-imaginary-event.png";
   import image2 from "../../../img/mantendo-o-estado-global-de-uma-maneira-sa-com-rel-events/2-basic-http-event.png";
@@ -114,13 +117,29 @@
   or
   <code>mapStateToProps</code>. It would be something like this:
 </p>
-<figure><img src={image1} alt="Imaginary Event" /></figure>
+<Highlight
+  language={javascript}
+  code={formatCodeString(`
+import { HTTPEvent } from "rel-events";
+
+export const LoginEvent = new HTTPEvent({ name: "login" });
+`)} />
 <p>
   Cool, but what about the whole behavior? Where's the logic to make the
   request? How to deal with bad requests? Let's say, besides the Event, we have
   something that manages the event flow, an Event Manager:
 </p>
-<figure><img src={image2} alt="Basic rel-events HTTPEvent" /></figure>
+<Highlight
+  language={javascript}
+  code={formatCodeString(`
+import { HTTPEvent } from "rel-events";
+import { LoginEventManager } from "./eventManagers";
+
+export const LoginEvent = new HTTPEvent({
+  name: "login",
+  manager: new LoginEventManager(),
+});
+`)} />
 <p>
   That's better. But how is this manager implemented? Because, if it needs to
   deal with the event flow, it needs to do a lot of stuff: know how to make the
@@ -128,13 +147,81 @@
   intermediary state, because we love loading spinners! Hell, I forgot about the
   inital state of the event as well! Ok, ok, let's see:
 </p>
-<figure><img src={image3} alt="LoginEventManager" /></figure>
+<Highlight
+  language={javascript}
+  code={formatCodeString(`
+import { fetchFromApi } from "rel-events";
+
+export class LoginEventManager {
+  initialState = { isLoading: false, username: "Anonymous" };
+
+  call = (user) => {
+    return () => fetchFromApi(
+      "/api/login",
+      { method: "POST", body: JSON.stringify(user) }
+    );
+  }
+
+  onDispatch = (state, event) => ({
+    ...state,
+    isLoading: true,
+    username: this.initialState.username
+  })
+
+  onSuccess = (state, event) => ({
+    ...state,
+    isLoading: this.initialState.isLoading,
+    username: event.response.data.username
+  })
+
+  onFailure = (state, event) => ({
+    ...state,
+    isLoading: this.initialState.isLoading,
+    username: this.initialState.username,
+    error: event.error.data
+  })
+});
+`)} />
 <p>
   That's about it, right? But, hey, how do we trigger it? And how do I make the
   Event register which Components are able to trigger it? How does the component
   get the data from it? We're almost there:
 </p>
-<figure><img src={image4} alt="Registering the component" /></figure>
+<Highlight
+  language={javascript}
+  code={formatCodeString(`
+// LoginComponent.js
+import React from "react";
+import { LoginEvent } from "./events";
+
+export class LoginComponent extends React.Component {
+  handleSubmit = () => {
+    const { user } = this.state;
+    // the Event injects its trigger as a prop with its own name ("login")
+    const { login } = this.props;
+
+    login(user);
+  }
+
+  render() {
+    const { username } = this.props;
+    return (
+      <React.Fragment>
+        <h1>Hello, {username}</h1>
+        <form>{ /* inputs and submit button */ }</form>
+      </React.Fragment>
+    );
+  }
+});
+
+// and here, we register the Component in the Event,
+// which injects its trigger as props (as described above),
+// and we also ask for the Events "username" value to be injected as well
+export default LoginEvent.register({
+  Component: LoginComponent,
+  props: ["username"]
+});
+`)} />
 <p>
   And that's exactly the current API for a HTTPEvent from
   <code>rel-events</code>. No actions, no reducers, no coupling between the

@@ -1,9 +1,8 @@
 <script lang="ts">
+  import Highlight from "../../../components/Highlight.svelte";
+  import { javascript } from "svelte-highlight/languages";
+  import { formatCodeString } from "../../../utils";
   import cover from "../../../img/mantendo-o-estado-global-de-uma-maneira-sa-com-rel-events/cover.png";
-  import image1 from "../../../img/mantendo-o-estado-global-de-uma-maneira-sa-com-rel-events/1-imaginary-event.png";
-  import image2 from "../../../img/mantendo-o-estado-global-de-uma-maneira-sa-com-rel-events/2-basic-http-event.png";
-  import image3 from "../../../img/mantendo-o-estado-global-de-uma-maneira-sa-com-rel-events/3-login-event-manager.png";
-  import image4 from "../../../img/mantendo-o-estado-global-de-uma-maneira-sa-com-rel-events/4-registering-component.png";
 </script>
 
 <svelte:head>
@@ -44,7 +43,7 @@
 <p>
   <a href="https://xkcd.com/927/"><img
       src="https://imgs.xkcd.com/comics/standards.png"
-      alt="xkcd tá sempre certo" /></a>
+      alt="Tirinha do xkcd que diz que toda vez que reclamamos que temos muitos jeitos de fazer algo, acabamos criando mais um" /></a>
 </p>
 <p>
   Sempre que eu penso em criar uma biblioteca nova, essa tirinha do xkcd vem me
@@ -124,14 +123,30 @@
   ou
   <code>mapStateToProps</code>. Seria algo mais ou menos assim:
 </p>
-<figure><img src={image1} alt="Evento Imaginário" /></figure>
+<Highlight
+  language={javascript}
+  code={formatCodeString(`
+import { HTTPEvent } from "rel-events";
+
+export const LoginEvent = new HTTPEvent({ name: "login" });
+`)} />
 <p>
   Legal, mas onde colocaríamos todo seu comportamento? Onde tá o código que faz
   a requisição? Como lidar com casos de erro? Digamos que, além do objeto de
   evento, nós tenhamos algo que gerencia todo o fluxo do evento, que chamaríamos
   de Event Manager:
 </p>
-<figure><img src={image2} alt="Basic rel-events HTTPEvent" /></figure>
+<Highlight
+  language={javascript}
+  code={formatCodeString(`
+import { HTTPEvent } from "rel-events";
+import { LoginEventManager } from "./eventManagers";
+
+export const LoginEvent = new HTTPEvent({
+  name: "login",
+  manager: new LoginEventManager(),
+});
+`)} />
 <p>
   Melhor. Mas como esse manager tá implementado? Porque, se a gente precisa
   lidar com o fluxo inteiro dentro dele, ele precisa saber de muita coisa: como
@@ -141,13 +156,81 @@
   esqueci que eu preciso de um estado inicial pra esse evento também, pra gente
   ter dados antes mesmo da requisição. Calma, calma, vamo lá:
 </p>
-<figure><img src={image3} alt="LoginEventManager" /></figure>
+<Highlight
+  language={javascript}
+  code={formatCodeString(`
+import { fetchFromApi } from "rel-events";
+
+export class LoginEventManager {
+  initialState = { isLoading: false, username: "Anonymous" };
+
+  call = (user) => {
+    return () => fetchFromApi(
+      "/api/login",
+      { method: "POST", body: JSON.stringify(user) }
+    );
+  }
+
+  onDispatch = (state, event) => ({
+    ...state,
+    isLoading: true,
+    username: this.initialState.username
+  })
+
+  onSuccess = (state, event) => ({
+    ...state,
+    isLoading: this.initialState.isLoading,
+    username: event.response.data.username
+  })
+
+  onFailure = (state, event) => ({
+    ...state,
+    isLoading: this.initialState.isLoading,
+    username: this.initialState.username,
+    error: event.error.data
+  })
+});
+`)} />
 <p>
   É mais ou menos isso que a gente precisa, né? Mas então, como que a gente
   faria pra registrar quais Componentes que poderiam disparar esse Evento? Como
   que o Componente pegaria os dados desse evento? Tamo quase lá:
 </p>
-<figure><img src={image4} alt="Registering the component" /></figure>
+<Highlight
+  language={javascript}
+  code={formatCodeString(`
+// LoginComponent.js
+import React from "react";
+import { LoginEvent } from "./events";
+
+export class LoginComponent extends React.Component {
+  handleSubmit = () => {
+    const { user } = this.state;
+    // o Evento injeta seu gatilho como prop, com o mesmo nome do Evento ("login")
+    const { login } = this.props;
+
+    login(user);
+  }
+
+  render() {
+    const { username } = this.props;
+    return (
+      <React.Fragment>
+        <h1>Hello, {username}</h1>
+        <form>{ /* inputs e botão de submit */ }</form>
+      </React.Fragment>
+    );
+  }
+});
+
+// e aqui, registramos o Componente no Evento,
+// que injeta o gatilho como descrito acima
+// e também pedimos que o valor de "username" do Evento seja injetado como prop
+export default LoginEvent.register({
+  Component: LoginComponent,
+  props: ["username"]
+});
+`)} />
 <p>
   E essa é exatamente a API atual para um Evento HTTP (HTTPEvent) da lib
   <code>rel-events</code>. Nada de actions nem reducers, nada de acoplar as
