@@ -1,13 +1,8 @@
 <script lang="ts">
+  import Highlight from "../../../components/Highlight.svelte";
+  import { javascript } from "svelte-highlight/languages";
+  import { formatCodeString } from "../../../utils";
   import cover from "../../../img/desacoplando-a-logica-de-componentes-react/cover.png";
-  import image1 from "../../../img/desacoplando-a-logica-de-componentes-react/image1.png";
-  import image2 from "../../../img/desacoplando-a-logica-de-componentes-react/image2.png";
-  import image3 from "../../../img/desacoplando-a-logica-de-componentes-react/image3.png";
-  import image4 from "../../../img/desacoplando-a-logica-de-componentes-react/image4.png";
-  import image5 from "../../../img/desacoplando-a-logica-de-componentes-react/image5.png";
-  import image6 from "../../../img/desacoplando-a-logica-de-componentes-react/image6.png";
-  import image7 from "../../../img/desacoplando-a-logica-de-componentes-react/image7.png";
-  import image8 from "../../../img/desacoplando-a-logica-de-componentes-react/image8.png";
 </script>
 
 <svelte:head>
@@ -43,7 +38,19 @@
   different possible implementations. One of them is to use lifecycle hooks to
   make requests. Your code may look a bit like this:
 </p>
-<figure><img alt="first code" src={image1} /></figure>
+<Highlight
+  language={javascript}
+  code={formatCodeString(`
+export default class Product extends React.Component {
+  // ...
+  componentDidMount() {
+    fetch("/api/products/1/")
+      .then(response => response.json())
+      .then(data => this.setState({...data}));
+  }
+  //...
+}
+`)} />
 <p>
   I think I don’t need to say this, but I’ll do it anyway: this implementation,
   even though it’s completely valid, has some
@@ -84,7 +91,28 @@
   reducers to deal with business logic and data formatting, your component code
   will probably look a bit like this:
 </p>
-<figure><img alt="segundo código" src={image2} /></figure>
+<Highlight
+  language={javascript}
+  code={formatCodeString(`
+export default class Product extends React.Component {
+  // ...
+  componentDidMount() {
+    const { fetchProductIsLoading, setProductData } = this.props;
+    // turns on the loading spinner via redux
+    fetchProductIsLoading();
+
+    // starts the request and puts data on the redux's store
+    fetch("/api/products/1/")
+      .then(response => response.json())
+      .then(data => setProductData(data));
+  }
+  //...
+  render() {
+    const { productIsLoading, productData } = this.props;
+    // ...
+  }
+}
+`)} />
 <p>
   This solves most of the issues, but I would argue that this solution makes
   everything
@@ -98,7 +126,15 @@
   <em>at least the best for most cases</em>, would be something akin to the
   following flowchart:
 </p>
-<figure><img alt="primeiro processo" src={image3} /></figure>
+<ul class="callout">
+  <li>Component mounts and dispatches isLoading signal to redux</li>
+  <li>Redux's action starts the request and triggers isLoading reducer</li>
+  <li>Component renders loading spinner</li>
+  <li>
+    Request is fullfilled asynchronously and triggers success or failure reducer
+  </li>
+  <li>Component renders sucess or failure based on redux's data</li>
+</ul>
 <p>
   Note that the only way to remove completely the business logic from the
   component is to trigger the ‘Success’ and ‘Failure’ use cases
@@ -111,8 +147,22 @@
   event), then react to it whenever the data is there. For that, our component
   code would need to be as simple as this:
 </p>
-<figure><img alt="terceiro codigo" src={image4} /></figure>
-<p>
+<Highlight
+  language={javascript}
+  code={formatCodeString(`
+export default class Product extends React.Component {
+  // ...
+  componentDidMount() {
+    const { fetchProduct } = this.props;
+    fetchProduct();
+  }
+  //...
+  render() {
+    const { productIsLoading, productData } = this.props;
+    // ...
+  }
+}
+`)} /><p>
   And that means that… the actions should fetch the data? And reducers would
   dispatch actions? Sounds weird, right? Because it is. And it’s not what I’m
   suggesting whatsoever.
@@ -129,20 +179,96 @@
   components focused on their jobs of rendering, and rendering only. The data
   flow would be something like this:
 </p>
-<figure><img alt="segundo processo" src={image5} /></figure>
+<ul class="callout">
+  <li>Component mounts and dispatches signal for redux to start the request</li>
+  <li>Redux's action describes success and failure reducers, along with which function will make the request</li>
+  <li>
+    <strong>Middleware calls the request function, saves the promise and triggers the isLoading reducer</strong>
+  </li>
+  <li>Component renders loading spinner</li>
+  <li>
+    <strong>Middleware awaits the request and triggers the success or failure reducer based on the action's specifications</strong>
+  </li>
+  <li>
+    Success or failure reducer executes business logic and persists response's data on the redux's store
+  </li>
+  <li>Component renders sucess or failure based on redux's data</li>
+</ul>
 <p>With this proposed flow, our action could look like this:</p>
-<figure><img alt="quarto codigo" src={image6} /></figure>
+<Highlight
+  language={javascript}
+  code={formatCodeString(`
+export function fetchProduct(id) {
+  return {
+    types: {
+      request: FETCH_PRODUCT_REQUEST,
+      success: FETCH_PRODUCT_SUCCESS,
+      failure: FETCH_PRODUCT_FAILURE,
+    },
+    apiCallFunction: () => fetch(\`/api/products/\$\{id\}\`),
+  }
+}
+`)} />
 <p>
   Ok, let’s slow down. What you see above is the current API for a request
   action, using the middleware included in our
-  <code>[react-redux-api-tools](https://www.npmjs.com/package/react-redux-api-tools)</code>
+  <a
+    href="https://www.npmjs.com/package/react-redux-api-tools"
+    target="_blank"
+    rel="noopener"><code>react-redux-api-tools</code></a>
   npm package. Dispatching this action would configure the middleware to make
   the request (by calling
   <code>apiCallFunction</code>) and to use the correct reducer whenever the
   request is done. Meanwhile, our component and reducers would remain unaltered:
 </p>
-<figure><img alt="quinto codigo" src={image7} /></figure>
-<figure><img alt="sexto codigo" src={image8} /></figure>
+<Highlight
+  language={javascript}
+  code={formatCodeString(`
+export default class Product extends React.Component {
+  // ...
+  componentDidMount() {
+    const { fetchProduct } = this.props;
+    fetchProduct();
+  }
+  //...
+  render() {
+    const { productIsLoading, productData } = this.props;
+    // ...
+  }
+}
+`)} />
+<Highlight
+language={javascript}
+code={formatCodeString(`
+export const productReducer = (state = initialState, action) => {
+  switch(action.type) {
+    case FETCH_PRODUCT_REQUEST:
+      return {
+        ...state,
+        error: null,
+        productIsLoading: true,
+      }
+    case FETCH_PRODUCT_SUCCESS:
+      // here, you may execute any business logic
+      businessLogic();
+
+      return {
+        ...state,
+        error: null,
+        productIsLoading: initialState.productIsLoading,
+        productData: action.response.data,
+      }
+    case FETCH_PRODUCT_FAILURE:
+      return {
+        ...state,
+        productIsLoading: initialState.productIsLoading,
+        error: action.response.data,
+      }
+    default:
+      return state;
+  }
+}
+`)} />
 <p>And <em>voilá</em>, the flow is much cleaner, simpler and decoupled!</p>
 <h2>If you liked this or it seems too magical...</h2>
 <p>
