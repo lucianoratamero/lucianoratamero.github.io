@@ -4,6 +4,7 @@
 - [x] adicionar title e meta tags
 - [x] implementar página de talks
 - [x] implementar ordenação
+- [x] implementar paginação
 - [x] arrumar o manifest.json
 - [x] deploy
 - [x] refatorar caminho das imagens usando link simbólico
@@ -15,5 +16,4 @@
 - [] deploy
 - [] migrar código que tá em imagens pra highlightjs
 - [] experimentar cards com resumos dos posts
-- [] implementar paginação
 - [] consertar readme

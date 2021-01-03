@@ -13,10 +13,16 @@ body {
 html {
   scroll-behavior: smooth;
   height: -webkit-fill-available;
-  font-size: 18px;
+  font-size: 22px;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@media (min-width: 480px) {
+  html {
+    font-size: 16px;
+  }
 }
 
 main {
@@ -39,13 +45,19 @@ a:visited {
 }
 
 button {
-  font-size: 18px;
+  font-size: 22px;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
+
+@media (min-width: 480px) {
+  button {
+    font-size: 16px;
+  }
 }
 
 code {
   font-family: "IBM Plex Mono", Inconsolata, Hack, monospace;
-  font-size: 80%;
+  font-size: 0.8rem;
   background: var(--code-bg-color);
   padding: 2px;
   border-radius: 2px;
@@ -103,9 +115,8 @@ pre.hljs {
   font-family: "IBM Plex Mono", Inconsolata, Hack, monospace;
 
   padding: 0.8rem;
-  border-radius: 0.6rem;
+  margin: 0.8rem -1.4rem;
 
-  font-size: 75%;
   line-height: 1.4;
   counter-reset: line;
 
@@ -113,11 +124,25 @@ pre.hljs {
   transition: box-shadow var(--transition-duration);
 }
 
+
+@media (min-width: 480px) {
+  pre.hljs {
+    margin: 0.8rem;
+    border-radius: 0.4rem;
+  }
+}
+
 pre.hljs code {
   counter-increment: line;
+  font-size: 0.7rem;
   padding-right: 0.8rem;
   background: transparent;
-  font-size: initial;
+}
+
+@media (min-width: 480px) {
+  pre.hljs code {
+    font-size: 1rem;
+  }
 }
 
 pre.hljs code:before {

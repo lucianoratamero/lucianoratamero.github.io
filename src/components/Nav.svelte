@@ -28,7 +28,7 @@
 <style>
   nav {
     position: sticky;
-    bottom: 1.4rem;
+    bottom: 0.8rem;
     max-width: 400px;
 
     left: 0;
@@ -39,6 +39,12 @@
     background-color: var(--nav-bg-color);
     box-shadow: var(--base-box-shadow);
     transition: box-shadow var(--transition-duration);
+  }
+
+  @media (min-width: 480px) {
+    nav {
+      bottom: 1.4rem;
+    }
   }
 
   ul {
@@ -56,12 +62,20 @@
   }
 
   a {
+    font-size: 1rem;
     font-weight: 500;
     text-decoration: none;
-    padding: 0.8rem 1.4rem;
+    padding: 0.4rem 0.8rem;
     overflow: hidden;
     position: relative;
     transition: color 0.2s ease-in;
+  }
+
+  @media (min-width: 480px) {
+    a {
+      font-size: 1.4rem;
+      padding: 0.8rem 1.6rem;
+    }
   }
 
   li:first-child a {
