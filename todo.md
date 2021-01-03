@@ -13,7 +13,7 @@
 - [x] implementar callout
 - [x] implementar tooltip
 - [x] adicionar link para imagens de posts
-- [] deploy
+- [x] experimentar cards com resumos dos posts
+- [x] deploy
 - [] migrar código que tá em imagens pra highlightjs
-- [] experimentar cards com resumos dos posts
 - [] consertar readme

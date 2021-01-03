@@ -12,9 +12,16 @@
 
 <h1>Recent posts</h1>
 
-<ul>
+<ul class="posts">
   {#each posts as post}
-    <li><a rel="prefetch" href="blog/{post.slug}">{post.title}</a></li>
+    <li>
+      <a rel="prefetch" href="blog/{post.slug}">
+        <section class="post-summary">
+          <h2><mark>{post.title}</mark></h2>
+          {@html post.html}
+        </section>
+      </a>
+    </li>
   {/each}
 </ul>
 
@@ -53,18 +60,21 @@
 </section>
 
 <style>
-  ul {
+h1 { margin-bottom: 1.2rem;}
+
+  .posts {
     margin: 0 0 1em 0;
     padding: 0;
   }
 
-  ul,
-  li {
+  .posts,
+  .posts li {
     list-style: none;
   }
 
-  li {
-    margin: 0.4rem 0;
+  .posts li,
+  .posts h2 {
+    margin: 0;
   }
 
   .paginator {

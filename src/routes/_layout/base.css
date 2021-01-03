@@ -17,6 +17,8 @@ html {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+
 }
 
 @media (min-width: 480px) {
@@ -33,6 +35,11 @@ main {
 
 mark {
   background: linear-gradient(145deg, var(--link-color), var(--accent-color));
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 a {
@@ -83,13 +90,6 @@ h1 {
   h1 {
     font-size: 2.8rem;
   }
-}
-
-mark {
-  -webkit-text-fill-color: transparent;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-  -webkit-background-clip: text;
 }
 
 p {
@@ -230,4 +230,36 @@ body .tippy-box {
 
 .callout p:first-child {
   margin-top: 0;
+}
+
+.post-summary {
+  padding: 0.8rem;
+  margin: 0 -0.8rem 0.8rem;
+  color: var(--font-color);
+  border-radius: 0.4rem;
+  transition: background-color 0.15s;
+  background-color: var(--code-bg-color);
+  box-shadow: var(--base-box-shadow);
+}
+
+@media (min-width: 480px) {
+  .post-summary {
+    font-size: 1rem;
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+
+.post-summary:hover {
+  background-color: var(--code-bg-color);
+  box-shadow: var(--base-box-shadow);
+}
+
+.post-summary h2 {
+  margin: 0;
+}
+
+.post-summary p {
+  margin: 0;
+  margin-top: 0.4rem;
 }
