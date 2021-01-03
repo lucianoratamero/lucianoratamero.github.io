@@ -12,4 +12,9 @@
   export let pageRange, pageNumber;
 </script>
 
+<svelte:head>
+  <title>Recent posts - luciano@ratamero.com</title>
+  <meta name="description" content="Luciano Ratamero's recent blog posts" />
+</svelte:head>
+
 <PaginatedPosts {posts} {pageNumber} {pageRange} />
