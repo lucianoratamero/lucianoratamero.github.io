@@ -11,14 +11,12 @@ body {
 }
 
 html {
-  scroll-behavior: smooth;
   height: -webkit-fill-available;
   font-size: 22px;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-
 }
 
 @media (min-width: 480px) {
@@ -124,7 +122,6 @@ pre.hljs {
   transition: box-shadow var(--transition-duration);
 }
 
-
 @media (min-width: 480px) {
   pre.hljs {
     margin: 0.8rem;
@@ -163,6 +160,7 @@ pre.hljs code:before {
   flex-direction: column;
   justify-content: center;
   padding: 1.4rem;
+  padding-bottom: 4rem;
 
   font-size: 18px;
   line-height: 1.4;
@@ -170,6 +168,12 @@ pre.hljs code:before {
 
   background-color: var(--background-color);
   transition: background-color var(--transition-duration);
+}
+
+@media (min-width: 480px) {
+  .theme {
+    padding-bottom: 6rem;
+  }
 }
 
 /* blog-post */
@@ -242,6 +246,10 @@ body .tippy-box {
   box-shadow: var(--base-box-shadow);
 }
 
+.post-summary a, .post-summary a:visited {
+  color: var(--font-color);
+}
+
 @media (min-width: 480px) {
   .post-summary {
     font-size: 1rem;
@@ -257,6 +265,7 @@ body .tippy-box {
 
 .post-summary h2 {
   margin: 0;
+  line-height: 1;
 }
 
 .post-summary p {
