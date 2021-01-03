@@ -38,7 +38,7 @@ export default {
 				emitCss: true
 			}),
 			url({
-				sourceDir: path.resolve(__dirname, 'src/images'),
+				sourceDir: path.resolve(__dirname, 'src/img'),
 				publicPath: '/client/'
 			}),
 			resolve({
