@@ -1,5 +1,12 @@
 .theme.light-theme {
+  --accent-color: rgb(204, 27, 189);
+  --nav-bg-color: #f0f0f0;
+
+  --link-color: rgb(45, 102, 148);
+  --link-color-visited: rgb(45, 102, 148);
+
   --background-color: #fff;
+  --code-bg-color: #f0f0f0;
 
   --font-color: #111;
   --base-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);

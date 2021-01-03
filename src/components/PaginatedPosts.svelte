@@ -118,7 +118,7 @@
   }
 
   .paginator a:hover {
-    color: #000;
+    color: var(--background-color);
   }
 
   .paginator a:hover::after {
@@ -131,13 +131,13 @@
 
   .paginator .active,
   .paginator button:disabled {
-    color: #000;
+    color: var(--background-color);
     background-color: var(--link-color);
   }
 
   .paginator .active:visited,
   .paginator button:disabled {
-    color: #000;
+    color: var(--background-color);
     background-color: var(--link-color-visited);
   }
 </style>

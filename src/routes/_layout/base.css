@@ -14,16 +14,15 @@ html {
   scroll-behavior: smooth;
   height: -webkit-fill-available;
   font-size: 18px;
-  font-family: "Poppins", Helvetica, sans-serif;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 main {
   position: relative;
-  max-width: 56em;
+  max-width: 48em;
   margin: 0 auto;
-  box-sizing: border-box;
 }
 
 mark {
@@ -41,7 +40,15 @@ a:visited {
 
 button {
   font-size: 18px;
-  font-family: "Poppins", Helvetica, sans-serif;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
+
+code {
+  font-family: "IBM Plex Mono", Inconsolata, Hack, monospace;
+  font-size: 80%;
+  background: var(--code-bg-color);
+  padding: 2px;
+  border-radius: 2px;
 }
 
 figure {
@@ -109,6 +116,8 @@ pre.hljs {
 pre.hljs code {
   counter-increment: line;
   padding-right: 0.8rem;
+  background: transparent;
+  font-size: initial;
 }
 
 pre.hljs code:before {
@@ -124,7 +133,7 @@ pre.hljs code:before {
 .theme {
   --transition-duration: 0.8s;
 
-  min-height: 100vh;
+  min-height: 100vh; /* Fallback for browsers that do not support Custom Properties */
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -77,6 +77,7 @@
 
   h1 {
     font-size: 3.4rem;
+    line-height: 1;
   }
 
   figure {
@@ -100,6 +101,9 @@
   }
 
   @media (min-width: 480px) {
+    h1 {
+      line-height: 1.6;
+    }
     p {
       margin: 0.4em auto;
     }
