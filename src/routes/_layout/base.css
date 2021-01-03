@@ -124,7 +124,8 @@ pre.hljs {
 
 @media (min-width: 480px) {
   pre.hljs {
-    margin: 0.8rem;
+    margin: 0;
+    margin-top: 0.8rem;
     border-radius: 0.4rem;
   }
 }
@@ -214,6 +215,10 @@ body .tippy-box {
   box-shadow: var(--base-box-shadow);
   position: relative;
   overflow: hidden;
+}
+
+ul.callout {
+  padding-left: 2.4rem;
 }
 
 .callout::before {

@@ -3,7 +3,7 @@
   import "./_layout/base.css";
   import "./_layout/dark.css";
   import "./_layout/light.css";
-  import { vs2015 } from "svelte-highlight/styles";
+  import { tomorrowNightBright } from "svelte-highlight/styles";
 
   import Nav from "../components/Nav.svelte";
   import theme from "../stores/theme";
@@ -40,7 +40,7 @@
 </script>
 
 <svelte:head>
-  {@html vs2015}
+  {@html tomorrowNightBright}
 </svelte:head>
 
 <section
