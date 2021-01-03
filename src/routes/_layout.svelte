@@ -73,6 +73,7 @@
     background: var(--loading-overlay-color);
     z-index: 1;
     left: -9999px;
+    top: 0;
     opacity: 0;
     transition: opacity 0.8s;
   }
