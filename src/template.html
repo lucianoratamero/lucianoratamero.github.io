@@ -24,12 +24,52 @@
 	<!-- This contains the contents of the <svelte:head> component, if
 	     the current page has one -->
 	%sapper.head%
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&display=swap"
+		rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet" />
+
 </head>
 
 <body>
 	<!-- The application will be rendered inside this element,
 	     because `src/client.js` references it -->
 	<div id="sapper">%sapper.html%</div>
+	<script>
+		document.addEventListener('readystatechange', function () {
+			if (document.readyState === 'interactive') {
+				// set theme
+				document.getElementsByClassName('theme')[0].classList = window.matchMedia &&
+					window.matchMedia("(prefers-color-scheme: dark)").matches
+					? "theme dark-theme"
+					: "theme light-theme";
+
+				// fix height on chrome mobile
+				let vh = window.innerHeight * 0.01;
+				// Then we set the value in the --vh custom property to the root of the document
+				document.documentElement.style.setProperty("--vh", `${vh}px`);
+
+				const isChrome = navigator.userAgent.indexOf("Chrome") > -1;
+				if (isChrome) {
+					document.getElementsByClassName("theme")[0].style["min-height"] =
+						"calc(var(--vh, 1vh) * 100)";
+				}
+
+				// We listen to the resize event
+				window.addEventListener("resize", () => {
+					// We execute the same script as before
+					let vh = window.innerHeight * 0.01;
+					document.documentElement.style.setProperty("--vh", `${vh}px`);
+
+					if (isChrome) {
+						document.getElementsByClassName("theme")[0].style["min-height"] =
+							"calc(var(--vh, 1vh) * 100)";
+					}
+				});
+			}
+		});
+	</script>
 </body>
 
 </html>
