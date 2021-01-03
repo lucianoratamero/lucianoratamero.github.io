@@ -1,13 +1,16 @@
+.theme,
 .theme.light-theme {
+  --background-color: #fff;
+  --loading-overlay-color: rgba(255, 255, 255, 0.7);
+
+  --font-color: #111;
+
   --accent-color: rgb(204, 27, 189);
-  --nav-bg-color: #f0f0f0;
+  --nav-bg-color: #f9f9f9;
 
   --link-color: rgb(45, 102, 148);
   --link-color-visited: rgb(45, 102, 148);
+  --code-bg-color: #f9f9f9;
 
-  --background-color: #fff;
-  --code-bg-color: #f0f0f0;
-
-  --font-color: #111;
   --base-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
 }

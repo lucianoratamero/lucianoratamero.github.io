@@ -1,11 +1,13 @@
 .theme.dark-theme {
   --background-color: #111;
-  --accent-color: #c1b;
-  --nav-bg-color: #1e1e1e;
+  --loading-overlay-color: rgba(17, 17, 17, 0.7);
 
   --font-color: #fff;
 
-  --link-color:rgb(78, 174, 253);
+  --accent-color: #c1b;
+  --nav-bg-color: #1e1e1e;
+
+  --link-color: rgb(78, 174, 253);
   --link-color-visited: rgb(78, 174, 253);
   --code-bg-color: #2b2b2b;
 

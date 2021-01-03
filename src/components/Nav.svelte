@@ -41,10 +41,6 @@
     transition: box-shadow var(--transition-duration);
   }
 
-  .hide-nav {
-    bottom: -3.6rem;
-  }
-
   ul {
     margin: 0;
     padding: 0;

@@ -9,7 +9,15 @@
   import theme from "../stores/theme";
   import TransitionWrapper from "../components/TransitionWrapper.svelte";
   import { onMount } from "svelte";
+  import { derived } from "svelte/store";
+  import { stores } from "@sapper/app";
   import { fixHeightOnChrome } from "../utils";
+  import { Circle2 } from "svelte-loading-spinners";
+
+  const { preloading } = stores();
+  const delayedPreloading = derived(preloading, (currentPreloading, set) => {
+    setTimeout(() => set(currentPreloading), 250);
+  });
 
   export let segment;
 
@@ -19,7 +27,6 @@
     fixHeightOnChrome();
 
     $theme =
-      window &&
       window.matchMedia &&
       window.matchMedia("(prefers-color-scheme: dark)").matches
         ? "dark"
@@ -34,19 +41,18 @@
 
 <svelte:head>
   {@html vs2015}
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&display=auto"
-    rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=auto"
-    rel="stylesheet" />
 </svelte:head>
 
 <section
   class="theme"
   class:dark-theme={$theme === 'dark'}
   class:light-theme={$theme === 'light'}>
+  <section
+    class="loading-overlay"
+    class:loading-overlay--show={$preloading && $delayedPreloading}>
+    <Circle2 />
+  </section>
+
   <TransitionWrapper>
     <main>
       <slot />
@@ -55,3 +61,24 @@
 
   <Nav {segment} />
 </section>
+
+<style>
+  .loading-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: var(--loading-overlay-color);
+    z-index: 1;
+    left: -9999px;
+    opacity: 0;
+    transition: opacity 0.8s;
+  }
+
+  .loading-overlay--show {
+    left: 0;
+    opacity: 1;
+  }
+</style>
