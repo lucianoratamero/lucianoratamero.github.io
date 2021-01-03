@@ -1,5 +1,5 @@
 <script lang="ts">
-  import caetano from "./caetano.jpg";
+  import caetano from "../../../img/caetano.jpg";
 </script>
 
 <svelte:head>
