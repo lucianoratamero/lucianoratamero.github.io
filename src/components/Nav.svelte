@@ -27,9 +27,9 @@
 
 <style>
   nav {
-    position: sticky;
+    position: fixed;
     bottom: 0.8rem;
-    max-width: 400px;
+    max-width: calc(100vw - 2.8rem);
 
     left: 0;
     right: 0;
@@ -43,6 +43,7 @@
 
   @media (min-width: 480px) {
     nav {
+      max-width: 24rem;
       bottom: 1.4rem;
     }
   }
@@ -58,7 +59,7 @@
   a {
     flex-grow: 1;
     display: flex;
-    text-align: center;
+    justify-content: center;
   }
 
   a {
