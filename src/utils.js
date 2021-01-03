@@ -1,8 +1,8 @@
-export function formatCodeString(code: string): string {
+export function formatCodeString(code) {
   return code.trim();
 }
 
-export function fixHeightOnChrome(): void {
+export function fixHeightOnChrome() {
   let vh = window.innerHeight * 0.01;
   // Then we set the value in the --vh custom property to the root of the document
   document.documentElement.style.setProperty("--vh", `${vh}px`);
