@@ -22,7 +22,7 @@
 
 <svelte:head>
   <title>welcome! - luciano@ratamero.com</title>
-  <meta name="description" content="Luciano Ratamero's personal website" />
+  <meta name="description" content="Luciano Ratamero's personal interwebs site! JS/Python developer and consultant. he/him. passions: music, poetry, videogames, NaN. Welcome :]" />
 </svelte:head>
 
 <h1><mark>Hi :]</mark></h1>

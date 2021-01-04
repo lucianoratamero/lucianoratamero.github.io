@@ -15,5 +15,5 @@
 - [x] adicionar link para imagens de posts
 - [x] experimentar cards com resumos dos posts
 - [x] deploy
-- [] migrar código que tá em imagens pra highlightjs
+- [x] migrar código que tá em imagens pra highlightjs
 - [] consertar readme
