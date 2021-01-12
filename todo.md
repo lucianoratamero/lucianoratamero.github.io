@@ -16,4 +16,4 @@
 - [x] experimentar cards com resumos dos posts
 - [x] deploy
 - [x] migrar código que tá em imagens pra highlightjs
-- [] consertar readme
+- [x] consertar readme
