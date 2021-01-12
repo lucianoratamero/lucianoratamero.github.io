@@ -1,6 +1,12 @@
-# sapper-template
+# ratamero.com
+
+This is the source code for my current personal site. It's based on the...
+
+## sapper-template
 
 The default template for setting up a [Sapper](https://github.com/sveltejs/sapper) project. Can use either Rollup or webpack as bundler.
+
+(I'm using the rollup one).
 
 
 ## Getting started
@@ -8,33 +14,19 @@ The default template for setting up a [Sapper](https://github.com/sveltejs/sappe
 
 ### Using `degit`
 
-To create a new Sapper project based on Rollup locally, run
+To create a new site based on mine, you may run
 
 ```bash
-npx degit "sveltejs/sapper-template#rollup" my-app
-```
-
-For a webpack-based project, instead run
-
-```bash
-npx degit "sveltejs/sapper-template#webpack" my-app
+npx degit "lucianoratamero/lucianoratamero.github.io#src" my-app
 ```
 
 [`degit`](https://github.com/Rich-Harris/degit) is a scaffolding tool that lets you create a directory from a branch in a repository.
 
 Replace `my-app` with the path where you wish to create the project.
 
-
-### Using GitHub templates
-
-Alternatively, you can create the new project as a GitHub repository using GitHub's template feature.
-
-Go to either [sapper-template-rollup](https://github.com/sveltejs/sapper-template-rollup) or [sapper-template-webpack](https://github.com/sveltejs/sapper-template-webpack) and click on "Use this template" to create a new project repository initialized by the template.
-
-
 ### Running the project
 
-Once you have created the project, install dependencies and run the project in development mode:
+Once you have created the project, install dependencies (npm install) and run the project in development mode:
 
 ```bash
 cd my-app
@@ -44,26 +36,7 @@ npm run dev
 
 This will start the development server on [localhost:3000](http://localhost:3000). Open it and click around.
 
-You now have a fully functional Sapper project! To get started developing, consult [sapper.svelte.dev](https://sapper.svelte.dev).
-
-### Using TypeScript
-
-By default, the template uses plain JavaScript. If you wish to use TypeScript instead, you need some changes to the project:
-
- * Add `typescript` as well as typings as dependences in `package.json`
- * Configure the bundler to use [`svelte-preprocess`](https://github.com/sveltejs/svelte-preprocess) and transpile the TypeScript code.
- * Add a `tsconfig.json` file
- * Update the project code to TypeScript
-
-The template comes with a script that will perform these changes for you by running
-
-```bash
-node scripts/setupTypeScript.js
-```
-
-`@sapper` dependencies are resolved through `src/node_modules/@sapper`, which is created during the build. You therefore need to run or build the project once to avoid warnings about missing dependencies.
-
-The script does not support webpack at the moment.
+You now have a fully functional Sapper project based on my site! To get started developing, consult [sapper.svelte.dev](https://sapper.svelte.dev).
 
 ## Directory structure
 
@@ -72,7 +45,7 @@ Sapper expects to find two directories in the root of your project —  `src` an
 
 ### src
 
-The [src](src) directory contains the entry points for your app — `client.js`, `server.js` and (optionally) a `service-worker.js` — along with a `template.html` file and a `routes` directory.
+The [src](src) directory contains the entry points for your app — `client.ts`, `server.ts` and (optionally) a `service-worker.ts` — along with a `template.html` file and a `routes` directory.
 
 
 #### src/routes
@@ -81,7 +54,7 @@ This is the heart of your Sapper app. There are two kinds of routes — *pages*,
 
 **Pages** are Svelte components written in `.svelte` files. When a user first visits the application, they will be served a server-rendered version of the route in question, plus some JavaScript that 'hydrates' the page and initialises a client-side router. From that point forward, navigating to other pages is handled entirely on the client for a fast, app-like feel. (Sapper will preload and cache the code for these subsequent pages, so that navigation is instantaneous.)
 
-**Server routes** are modules written in `.js` files, that export functions corresponding to HTTP methods. Each function receives Express `request` and `response` objects as arguments, plus a `next` function. This is useful for creating a JSON API, for example.
+**Server routes** are modules written in `.(j|t)s` files, that export functions corresponding to HTTP methods. Each function receives Express `request` and `response` objects as arguments, plus a `next` function. This is useful for creating a JSON API, for example.
 
 There are three simple rules for naming the files that define your routes:
 
@@ -124,9 +97,9 @@ Sapper uses Rollup or webpack to provide code-splitting and dynamic imports, as 
 
 ## Production mode and deployment
 
-To start a production version of your app, run `npm run build && npm start`. This will disable live reloading, and activate the appropriate bundler plugins.
+To deploy this app to github pages, set up your `[yourusername].github.io` repository, push this source code to the `src` branch and run `npm run deploy`. It will export all pages via SSG, then push it to the `main|master` branch of your repo. That will make your site available on the `[yourusername].github.io` URL.
 
-You can deploy your application to any environment that supports Node 10 or above. As an example, to deploy to [Vercel Now](https://vercel.com) when using `sapper export`, run these commands:
+You can also deploy your application to any environment that supports Node 10 or above. As an example, to deploy to [Vercel Now](https://vercel.com) when using `sapper export`, run these commands:
 
 ```bash
 npm install -g vercel
