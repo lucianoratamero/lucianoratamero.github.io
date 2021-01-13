@@ -1,15 +1,13 @@
 <script>
   import tippy from "sveltejs-tippy";
+  import MetaTags from "../../../components/MetaTags.svelte";
 </script>
 
 <svelte:head>
-  <title>sapper: notas sobre o meu site novo - luciano@ratamero.com</title>
-  <meta
-    name="description"
-    content="ter feito o site novo com sapper me abriu os olhos pro novo mundo do svelte e de como fazer páginas acessíveis e leves. chega mais pra ver minhas notas sobre a migração do conteúdo :]" />
-  <meta
-    name="keywords"
-    content="Luciano Ratamero, svelte, sapper, javascript, frontend, SSG, SEO" />
+  <MetaTags
+    title="sapper: notas sobre o meu site novo"
+    description="ter feito o site novo com sapper me abriu os olhos pro novo mundo do svelte e de como fazer páginas acessíveis e leves. chega mais pra ver minhas notas sobre a migração do conteúdo :]"
+    keywords="svelte, sapper, javascript, frontend, SSG, SEO" />
 </svelte:head>
 
 <h1><mark>sapper: notas sobre o meu site novo</mark></h1>
@@ -158,10 +156,11 @@
   <a
     rel="noopener"
     target="_blank"
-    href="https://www.youtube.com/watch?v=9i0aDJ56TNU">um vídeo no youtube de como implementar essa paginação no sapper</a>
+    href="https://www.youtube.com/watch?v=9i0aDJ56TNU">um vídeo no youtube de
+    como implementar essa paginação no sapper</a>
   (que aliás já tá meio defasado). no fim das contas, foram umas 5 horas
-  investidas nisso, o que acho um tempo bem razoável pra uma funcionalidade desse
-  tamanho.
+  investidas nisso, o que acho um tempo bem razoável pra uma funcionalidade
+  desse tamanho.
 </p>
 
 <h3 id="osappertcomosdiascontados">o sapper tá com os dias contados</h3>
