@@ -15,12 +15,12 @@
 <ul class="posts">
   {#each posts as post}
     <li>
-      <a rel="prefetch" href="blog/{post.slug}">
-        <section class="post-summary">
+      <section class="post-summary">
+        <a rel="prefetch" href="blog/{post.slug}">
           <h2><mark>{post.title}</mark></h2>
           {@html post.html}
-        </section>
-      </a>
+        </a>
+      </section>
     </li>
   {/each}
 </ul>
