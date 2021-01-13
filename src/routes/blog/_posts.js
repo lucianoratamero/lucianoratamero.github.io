@@ -9,6 +9,29 @@
 
 const posts = [
   {
+    title: "sapper: notas sobre o meu site novo",
+    slug: "sapper-notas-sobre-o-meu-site-novo",
+    date: "2021-01-12",
+    html: `
+    <p>
+      faz pouco mais de seis meses que eu comecei a estudar e me envolver com
+      <a rel="noopener" target="_blank" href="https://svelte.dev">svelte</a>. desde
+      então, me encanta o quão pouco esforço e tempo é necessário pra fazer
+      basicamente o que quiser no front. mas o projeto que me ganhou mesmo foi o
+      <a rel="noopener" target="_blank" href="https://sapper.svelte.dev">sapper</a>.
+      ele traz todos (<strong>TODOS</strong>) os benefícios de frameworks como o
+      nextjs e o gatsby, mas com muito menos complicação.
+    </p>
+
+    <p>
+      como de lei, tomei a descoberta do sapper como oportunidade de rescrever meu
+      site e tirar da gaveta o plano de ter algum lugar online pra prototipar novos
+      estudos de front. aqui ficam minhas anotações de soluções e problemas de ter
+      usado o sapper pra um site novo!
+    </p>
+    `,
+  },
+  {
     title: "Python para desenvolvedores JavaScript",
     slug: "python-para-desenvolvedores-javascript",
     date: "2017-06-08",
@@ -218,8 +241,10 @@ const posts = [
     `,
   },
   {
-    title: "porque eu trabalho remotamente — mas não culpo quem não contrata gente como eu",
-    slug: "porque-eu-trabalho-remotamente-mas-nao-culpo-quem-nao-contrata-gente-como-eu",
+    title:
+      "porque eu trabalho remotamente — mas não culpo quem não contrata gente como eu",
+    slug:
+      "porque-eu-trabalho-remotamente-mas-nao-culpo-quem-nao-contrata-gente-como-eu",
     date: "2017-01-24",
     html: `
     <p>
@@ -261,7 +286,6 @@ const posts = [
     </p>
     `,
   },
-
 ];
 
 posts.forEach((post) => {
@@ -270,7 +294,8 @@ posts.forEach((post) => {
 
 const PAGE_SIZE = 5;
 
-export const orderPostsByDate = (posts) => posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+export const orderPostsByDate = (posts) =>
+  posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
 export function paginate(posts) {
   let paginatedPosts = {};
@@ -293,6 +318,8 @@ const orderedPosts = orderPostsByDate(posts);
 export const paginatedPosts = paginate(orderedPosts);
 export const numberOfPages = Object.keys(paginatedPosts).length;
 export const postsByPage = (index) => paginatedPosts[index];
-export const pageRange = Array(numberOfPages).fill().map((_, idx) => idx + 1);
+export const pageRange = Array(numberOfPages)
+  .fill()
+  .map((_, idx) => idx + 1);
 
 export default posts;
