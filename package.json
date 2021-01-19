@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
-    "export": "node compressImages.js && sapper export --legacy",
+    "export": "node compressImages.js && sapper export --legacy && git checkout src/img",
     "start": "serve __sapper__/export -p 3000",
     "deploy": "npm run export && gh-pages -d __sapper__/export -b master -f -t",
     "validate": "svelte-check --ignore src/node_modules/@sapper"
