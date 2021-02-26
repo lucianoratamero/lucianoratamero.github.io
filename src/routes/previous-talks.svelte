@@ -7,6 +7,23 @@
 
 <h1>Talks</h1>
 
+<h3><strong>2021</strong></h3>
+<p>
+  <a
+    rel="noreferrer noopener"
+    target="_blank"
+    href="https://www.ratamero.com/talks/2021/svelte-capacitor-vs-cordova/">
+    Svelte Brasil - Svelte para apps: Capacitor vs Cordova
+  </a>
+  -
+  <a
+    rel="noreferrer noopener"
+    target="_blank"
+    href="https://youtu.be/KNvvRs6Krv8">
+    Youtube
+  </a>
+</p>
+
 <h3><strong>2020</strong></h3>
 <p>
   <a
