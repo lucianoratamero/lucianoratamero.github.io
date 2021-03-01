@@ -13,6 +13,7 @@
   import { stores } from "@sapper/app";
   import { fixHeightOnChrome } from "../utils";
   import { Circle2 } from "svelte-loading-spinners";
+  import BradFrostBubbles from "../components/brad-frost-bubbles/BradFrostBubbles.svelte";
 
   const { preloading } = stores();
   const delayedPreloading = derived(preloading, (currentPreloading, set) => {
@@ -20,11 +21,13 @@
   });
 
   export let segment;
+  let bradFrostThemeEnabled;
 
   let darkThemeEnabled = $theme === "dark";
 
   onMount(() => {
     fixHeightOnChrome();
+    bradFrostThemeEnabled = Math.random() > 0.9;
 
     $theme =
       window.matchMedia &&
@@ -53,8 +56,12 @@
     <Circle2 />
   </section>
 
-  <TransitionWrapper>
-    <main>
+  {#if bradFrostThemeEnabled}
+    <BradFrostBubbles />
+  {/if}
+
+  <TransitionWrapper disableTransition={bradFrostThemeEnabled}>
+    <main class:brad-frost={bradFrostThemeEnabled}>
       <slot />
     </main>
   </TransitionWrapper>

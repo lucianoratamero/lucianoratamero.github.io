@@ -28,6 +28,7 @@
 <style>
   nav {
     position: fixed;
+    z-index: 12;
     bottom: 0.8rem;
     max-width: calc(100vw - 2.8rem);
 

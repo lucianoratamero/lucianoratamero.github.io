@@ -29,6 +29,18 @@ main {
   position: relative;
   max-width: 48em;
   margin: 0 auto;
+  z-index: 10;
+}
+
+main.brad-frost {
+  background: var(--main-background-color);
+  padding: 1rem;
+  border-radius: 0.4rem;
+}
+
+main.brad-frost .post-summary {
+  background: unset;
+  box-shadow: none;
 }
 
 mark {
@@ -160,7 +172,7 @@ pre.hljs code:before {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1.4rem;
+  padding: 0.8rem;
   padding-bottom: 4rem;
 
   font-size: 18px;
@@ -251,7 +263,8 @@ ul.callout {
   box-shadow: var(--base-box-shadow);
 }
 
-.post-summary a, .post-summary a:visited {
+.post-summary a,
+.post-summary a:visited {
   color: var(--font-color);
 }
 
