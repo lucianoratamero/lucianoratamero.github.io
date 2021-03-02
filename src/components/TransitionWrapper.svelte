@@ -6,11 +6,9 @@
 </script>
 
 {#if disableTransition}
-  {#key $page}
-    <section class="transition-wrapper">
-      <slot />
-    </section>
-  {/key}
+  <section class="transition-wrapper">
+    <slot />
+  </section>
 {:else}
   {#key $page}
     <section class="transition-wrapper" in:fade>
