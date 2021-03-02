@@ -1,0 +1,32 @@
+<!doctype html> <html lang=en> <head> <meta charset=utf-8> <meta content="width=device-width,initial-scale=1" name=viewport> <meta content=#333333 name=theme-color> <base href=/ > <link href=manifest.json rel=manifest crossorigin=use-credentials> <link href=favicon.png rel=icon type=image/png> <script>__SAPPER__={baseUrl:"",preloaded:[void 0]};if('serviceWorker' in navigator)navigator.serviceWorker.register('/service-worker.js');(function(){try{eval("async function x(){}");var main="/client/client.311a5b93.js"}catch(e){main="/client/legacy/client.eda691f8.js"};var s=document.createElement("script");try{new Function("if(0)import('')")();s.src=main;s.type="module";s.crossOrigin="use-credentials";}catch(e){s.src="/client/shimport@2.0.4.js";s.setAttribute("data-main",main);}document.head.appendChild(s);}());</script> <link href=client/client-a688d852.css rel=stylesheet><link href=client/Icon-dfea4060.css rel=stylesheet><link href=client/index-ce6069ef.css rel=stylesheet> <style>.hljs-comment,.hljs-quote{color:#969896}.hljs-deletion,.hljs-name,.hljs-regexp,.hljs-selector-class,.hljs-selector-id,.hljs-tag,.hljs-template-variable,.hljs-variable{color:#d54e53}.hljs-built_in,.hljs-builtin-name,.hljs-link,.hljs-literal,.hljs-meta,.hljs-number,.hljs-params,.hljs-type{color:#e78c45}.hljs-attribute{color:#e7c547}.hljs-addition,.hljs-bullet,.hljs-string,.hljs-symbol{color:#b9ca4a}.hljs-section,.hljs-title{color:#7aa6da}.hljs-keyword,.hljs-selector-tag{color:#c397d8}.hljs{display:block;overflow-x:auto;background:#000;color:#eaeaea;padding:.5em}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}</style> <link href=https://fonts.gstatic.com rel=preconnect> <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel=stylesheet> <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel=stylesheet> <link href=/client/client.311a5b93.js rel=modulepreload as=script crossorigin=use-credentials><link href=/client/client-a688d852.css rel=preload as=style><link href=/client/index.590ec39b.js rel=modulepreload as=script crossorigin=use-credentials><link href=/client/Icon.06acf308.js rel=modulepreload as=script crossorigin=use-credentials><link href=/client/inject_styles.5607aec6.js.gz rel=modulepreload as=script crossorigin=use-credentials><link href=/client/Icon-dfea4060.css rel=preload as=style><link href=/client/index-ce6069ef.css rel=preload as=style></head> <body> <div id=sapper> <section class="light-theme theme"><section class="loading-overlay svelte-1rtsid8"><div class="circle svelte-gkf9c4" style=--size:60px;--colorInner:#676778;--colorCenter:#40B3FF;--colorOuter:#FF3E00></div></section> <section class=transition-wrapper><main></main></section> <nav class=svelte-1kh6syz><ul class=svelte-1kh6syz><li class=svelte-1kh6syz><a class=svelte-1kh6syz href=/ rel=prefetch>about</a></li> <li class=svelte-1kh6syz><a class=svelte-1kh6syz href=blog/page/1 rel=prefetch>blog</a></li> <li class=svelte-1kh6syz><a class=svelte-1kh6syz href=previous-talks rel=prefetch>talks</a></ul> </nav> </section></div> <script> document.addEventListener('readystatechange', function () {
+			if (document.readyState === 'interactive') {
+				// set theme
+				document.getElementsByClassName('theme')[0].classList = window.matchMedia &&
+					window.matchMedia("(prefers-color-scheme: dark)").matches
+					? "theme dark-theme"
+					: "theme light-theme";
+
+				// fix height on chrome mobile
+				let vh = window.innerHeight * 0.01;
+				// Then we set the value in the --vh custom property to the root of the document
+				document.documentElement.style.setProperty("--vh", `${vh}px`);
+
+				const isChrome = navigator.userAgent.indexOf("Chrome") > -1;
+				if (isChrome) {
+					document.getElementsByClassName("theme")[0].style["min-height"] =
+						"calc(var(--vh, 1vh) * 100)";
+				}
+
+				// We listen to the resize event
+				window.addEventListener("resize", () => {
+					// We execute the same script as before
+					let vh = window.innerHeight * 0.01;
+					document.documentElement.style.setProperty("--vh", `${vh}px`);
+
+					if (isChrome) {
+						document.getElementsByClassName("theme")[0].style["min-height"] =
+							"calc(var(--vh, 1vh) * 100)";
+					}
+				});
+			}
+		}); </script> 
