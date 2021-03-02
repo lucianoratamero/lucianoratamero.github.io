@@ -12,7 +12,7 @@
   }
 
   function build() {
-    let baseNumberofParticles = window.innerWidth / 2;
+    let baseNumberofParticles = window.innerWidth / 3;
     let particlesRange = range(
       parseInt(baseNumberofParticles * randomFromInterval(0.2, 0.4))
     );
