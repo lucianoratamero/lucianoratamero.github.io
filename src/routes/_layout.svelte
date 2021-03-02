@@ -14,6 +14,8 @@
   import { fixHeightOnChrome } from "../utils";
   import { Circle2 } from "svelte-loading-spinners";
   import BradFrostBubbles from "../components/backgrounds/brad-frost-bubbles/BradFrostBubbles.svelte";
+  import Raindrops from "../components/backgrounds/Raindrops.svelte";
+import CustomBg from "../components/backgrounds/CustomBg.svelte";
 
   const { preloading } = stores();
   const delayedPreloading = derived(preloading, (currentPreloading, set) => {
@@ -21,13 +23,13 @@
   });
 
   export let segment;
-  let bradFrostThemeEnabled;
+  let customBgIsActive;
 
   let darkThemeEnabled = $theme === "dark";
 
   onMount(() => {
     fixHeightOnChrome();
-    bradFrostThemeEnabled = Math.random() > 0.9;
+    customBgIsActive = Math.random() > 0.8;
 
     $theme =
       window.matchMedia &&
@@ -56,12 +58,12 @@
     <Circle2 />
   </section>
 
-  {#if bradFrostThemeEnabled}
-    <BradFrostBubbles />
+  {#if customBgIsActive}
+    <CustomBg />
   {/if}
 
-  <TransitionWrapper disableTransition={bradFrostThemeEnabled}>
-    <main class:brad-frost={bradFrostThemeEnabled}>
+  <TransitionWrapper disableTransition={customBgIsActive}>
+    <main class:custom-bg={customBgIsActive}>
       <slot />
     </main>
   </TransitionWrapper>

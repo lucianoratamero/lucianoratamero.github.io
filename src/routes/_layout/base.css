@@ -32,7 +32,7 @@ main {
   z-index: 10;
 }
 
-main.brad-frost {
+main.custom-bg {
   background: var(--main-background-color);
   padding: 1rem;
   border-radius: 0.4rem;

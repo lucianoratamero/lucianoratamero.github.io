@@ -1,6 +1,6 @@
 .theme.dark-theme {
   --background-color: #111;
-  --main-background-color: rgba(17, 17, 17, 0.95);
+  --main-background-color: rgba(17, 17, 17, 0.8);
   --loading-overlay-color: rgba(17, 17, 17, 0.7);
 
   --font-color: #fff;
