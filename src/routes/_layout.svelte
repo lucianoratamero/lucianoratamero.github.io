@@ -13,7 +13,7 @@
   import { stores } from "@sapper/app";
   import { fixHeightOnChrome } from "../utils";
   import { Circle2 } from "svelte-loading-spinners";
-  import BradFrostBubbles from "../components/brad-frost-bubbles/BradFrostBubbles.svelte";
+  import BradFrostBubbles from "../components/backgrounds/brad-frost-bubbles/BradFrostBubbles.svelte";
 
   const { preloading } = stores();
   const delayedPreloading = derived(preloading, (currentPreloading, set) => {
