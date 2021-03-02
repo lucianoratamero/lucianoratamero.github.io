@@ -22,7 +22,9 @@
 
 <svelte:head>
   <title>welcome! - luciano@ratamero.com</title>
-  <meta name="description" content="Luciano Ratamero's personal interwebs site! JS/Python developer and consultant. he/him. passions: music, poetry, videogames, NaN. Welcome :]" />
+  <meta
+    name="description"
+    content="Luciano Ratamero's personal interwebs site! JS/Python developer and consultant. he/him. passions: music, poetry, videogames, NaN. Welcome :]" />
 </svelte:head>
 
 <h1><mark>Hi :]</mark></h1>
@@ -39,31 +41,36 @@
 <p>Luciano Ratamero here o/</p>
 <p>I'm {age}, brazilian, programmer, he/him</p>
 <p>
-  currently based in Recife, Brazil, working as a Senior JS/Python dev at
+  based in Recife, Brazil - JS/Python consultant at
   <a
     href="https://labcodes.com.br/"
     rel="noopener noreferrer"
     target="_blank">Labcodes</a>
+  and
+  <a
+    href="https://simplefractal.com/"
+    rel="noopener noreferrer"
+    target="_blank">Simple Fractal</a>
 </p>
 
 <p>thanks for stopping by!</p>
 
 <section class="social-icons">
-  <a href="https://twitter.com/lucianoratamero" aria-label="Luciano on Twitter"><Icon
-      scale={2}
-      data={faTwitter} /></a>
-  <a href="https://www.linkedin.com/in/luciano-ratamero-06b98b32/" aria-label="Luciano on LinkedIn"><Icon
-      scale={2}
-      data={faLinkedin} /></a>
-  <a href="https://github.com/lucianoratamero/" aria-label="Luciano on Github"><Icon
-      scale={2}
-      data={faGithub} /></a>
-  <a href="http://lastfm.com/user/lucianoratamero" aria-label="Luciano on LastFM"><Icon
-      scale={2}
-      data={faLastfm} /></a>
-  <a href="https://twitch.tv/lucianoratamero" aria-label="Luciano on Twitch"><Icon
-      scale={2}
-      data={faTwitch} /></a>
+  <a
+    href="https://twitter.com/lucianoratamero"
+    aria-label="Luciano on Twitter"><Icon scale={2} data={faTwitter} /></a>
+  <a
+    href="https://www.linkedin.com/in/luciano-ratamero-06b98b32/"
+    aria-label="Luciano on LinkedIn"><Icon scale={2} data={faLinkedin} /></a>
+  <a
+    href="https://github.com/lucianoratamero/"
+    aria-label="Luciano on Github"><Icon scale={2} data={faGithub} /></a>
+  <a
+    href="http://lastfm.com/user/lucianoratamero"
+    aria-label="Luciano on LastFM"><Icon scale={2} data={faLastfm} /></a>
+  <a
+    href="https://twitch.tv/lucianoratamero"
+    aria-label="Luciano on Twitch"><Icon scale={2} data={faTwitch} /></a>
 </section>
 
 <style>
